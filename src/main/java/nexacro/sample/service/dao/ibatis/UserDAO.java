@@ -2,13 +2,9 @@ package nexacro.sample.service.dao.ibatis;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import nexacro.sample.vo.UserVO;
 
 import org.springframework.stereotype.Repository;
-
-import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 
 /**
  * <pre>

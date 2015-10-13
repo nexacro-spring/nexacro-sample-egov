@@ -2,13 +2,9 @@ package nexacro.sample.service.dao.ibatis;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import nexacro.sample.vo.SampleVO;
 
 import org.springframework.stereotype.Repository;
-
-import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 
 /**
  * <pre>
@@ -30,14 +26,14 @@ import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
  * </pre>
  */
 @Repository("sampleDAO")
-public class SampleDAO extends EgovAbstractDAO {
+public class SampleDAO extends NexacroIbatisAbstractDAO {
 
-	@Resource(name="sampleDAO")
-	private SampleDAO self;
+//	@Resource(name="sampleDAO")
+//	private SampleDAO self;
 	
     public List<SampleVO> selectSampleVoList(SampleVO searchVO) {
-//    	return (List<SampleVO>) list("sampleDAO.selectSampleVOList", searchVO);
-    	return (List<SampleVO>) self.list("sampleDAO.selectSampleVOList", searchVO);
+    	return (List<SampleVO>) list("sampleDAO.selectSampleVOList", searchVO);
+//    	return (List<SampleVO>) self.list("sampleDAO.selectSampleVOList", searchVO);
     }
 
     public void insertSampleVO(SampleVO sample) {

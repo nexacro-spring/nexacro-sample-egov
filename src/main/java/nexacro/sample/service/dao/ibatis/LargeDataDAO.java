@@ -1,16 +1,11 @@
 package nexacro.sample.service.dao.ibatis;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
-import com.nexacro.spring.dao.ibatis.SqlMapClientRowHandler;
 import com.nexacro.spring.data.NexacroFirstRowHandler;
-
-import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 
 /**
  * <pre>

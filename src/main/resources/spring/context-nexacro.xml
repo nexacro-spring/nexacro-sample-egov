@@ -28,14 +28,15 @@
 	<bean id="ibatisMetaDataProvider" class="com.nexacro.spring.dao.ibatis.NexacroIbatisMetaDataProvider" >
 		<property name="dbmsProvider" ref="dbmsProvider" />
 	</bean>
-	
+
+	<!-- 	
 	<aop:aspectj-autoproxy proxy-target-class="true"/>
     <aop:config >
-        <!-- <aop:pointcut  id="ibatisSelectPointCut" expression="execution(* nexacro..service.dao.ibatis..DAO*.list*(..))" />  -->
         <aop:pointcut  id="ibatisSelectPointCut" expression="execution(* nexacro..service.dao.ibatis..DAO*.list*(..))" />
         <aop:aspect ref="ibatisMetaDataProvider" >
         	<aop:around method="getQueryMetaData" pointcut-ref="ibatisSelectPointCut"/>
         </aop:aspect>
     </aop:config>
-    
+     -->
+     
 </beans>

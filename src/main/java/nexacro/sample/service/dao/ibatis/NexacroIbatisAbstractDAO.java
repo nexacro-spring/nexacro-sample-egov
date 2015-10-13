@@ -74,7 +74,7 @@ public class NexacroIbatisAbstractDAO extends EgovAbstractDAO {
 	}
 	
 	private List<?> getMetaData(String queryId, Object parameterObject, List originalResult) {
-		return (List<?>) ibatisMetaDataProvider.doGetQueryMetaData(this, new Object[]{queryId, parameterObject}, originalResult);
+		return (List<?>) ibatisMetaDataProvider.doGetQueryMetaData(this, new Object[]{queryId, parameterObject});
 	}
 	
     public void queryWithFirstRowHandler(String queryId, Object parameterObject, NexacroFirstRowHandler firstRowHandler, String sendName, int firstRowCount) {
