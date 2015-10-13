@@ -1,0 +1,10 @@
+﻿{
+	"name": "ExtAPI",
+	"version": "13.0.0.0",
+	"description": "Extapi Component Library",
+	"license": "",
+	"scripts": [
+			"ExtAPI/jquery-1.10.2.js", 
+	]
+}
+//@ sourceURL=ExtAPI.json

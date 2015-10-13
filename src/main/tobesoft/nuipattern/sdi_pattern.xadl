@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.2">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="pattern" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="nexacro.xtheme">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" left="0" top="0" width="1024" height="768">
+        <ChildFrame id="childframe" formurl="frame::Login.xfdl" showtitlebar="false" showstatusbar="false" openeffect="" closeeffect=""/>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+  <Script type="xscript5.0"><![CDATA[TOBE=nexacro;
+this.gfn_globalFunction=function(sArg)
+{
+	var sRtn="Global Function is called!";
+	return sRtn;
+}]]></Script>
+</ADL>

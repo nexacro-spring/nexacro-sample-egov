@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Work" classname="Work" inheritanceid="" position="absolute" titletext="List/Detail" left="0" width="800" top="0" height="400">
+    <Layouts>
+      <Layout>
+        <Div id="div_search00" taborder="0" text="Div00" left="0" top="0" right="0" height="41" scrollbars="none" cssclass="div_WF_searchBg">
+          <Layouts>
+            <Layout>
+              <Static id="st_searchCondition" taborder="28" text="검색조건" cssclass="sta_WF_schTitle" left="20" top="0" width="64" height="41" domainId="nexa.s_condition"/>
+              <Combo id="cmb_searchCondition" taborder="29" codecolumn="codecolumn" datacolumn="datacolumn" left="86" top="10" width="110" height="20" domainId="nexa.name;nexa.code">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">0</Col>
+                      <Col id="datacolumn">명칭</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">1</Col>
+                      <Col id="datacolumn">코드</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Edit id="edt_searchKeyword" taborder="30" onkeyup="div_search_edt_searchKeyword_onkeyup" left="198" top="10" width="180" height="20"/>
+              <Button id="btn_search" taborder="31" cssclass="btn_WF_schArea" top="0" right="0" bottom="0" width="51" domainId="nexa.search"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static08" taborder="1" cssclass="sta_WF_detailLabel2" left="0" top="389" right="0" height="28"/>
+        <Static id="Static10" taborder="2" cssclass="sta_WF_detailLabel2" left="0" top="416" right="0" height="28"/>
+        <Static id="Static02" taborder="3" cssclass="sta_WF_detailLabel2" left="0" top="443" right="0" height="28"/>
+        <Static id="Static00" taborder="4" cssclass="sta_WF_detailLabel2" left="0" top="470" right="0" bottom="5"/>
+        <Grid id="grd_list" taborder="5" binddataset="ds_List" useinputpanel="false" cellsizingtype="col" autofittype="col" left="0" top="89" right="0" height="265">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="40"/>
+                <Column size="46"/>
+                <Column size="40"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell rowspan="2" displaytype="checkbox" edittype="checkbox" text="1"/>
+                <Cell col="1" rowspan="2" text="순번"/>
+                <Cell col="2" rowspan="2" text="상태"/>
+                <Cell col="3" colspan="4" text="계정코드"/>
+                <Cell col="7" colspan="4" text="계정과목명"/>
+                <Cell row="1" col="3"/>
+                <Cell row="1" col="4" text="관"/>
+                <Cell row="1" col="5" text="항"/>
+                <Cell row="1" col="6" text="목"/>
+                <Cell row="1" col="7"/>
+                <Cell row="1" col="8" text="관"/>
+                <Cell row="1" col="9" text="항"/>
+                <Cell row="1" col="10" text="목"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="checkbox" edittype="checkbox" style="align:center middle;" text="bind:chk"/>
+                <Cell col="1" expr="expr:currow+1"/>
+                <Cell col="2"/>
+                <Cell col="3" edittype="normal"/>
+                <Cell col="4" edittype="normal"/>
+                <Cell col="5" edittype="normal"/>
+                <Cell col="6" edittype="normal" style="align:left;padding:0 0 0 5;"/>
+                <Cell col="7" displaytype="combo" edittype="combo" combodataset="Dataset00" combocodecol="Column0" combodatacol="Column1"/>
+                <Cell col="8"/>
+                <Cell col="9"/>
+                <Cell col="10"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static_18" taborder="6" text="계정과목" cssclass="sta_WF_detailLabel" left="0" top="389" width="114" height="28"/>
+        <Static id="Static_21" taborder="7" text="차대구분" cssclass="sta_WF_detailLabel" left="484" top="389" width="114" height="28"/>
+        <Static id="Static_24" taborder="8" text="수입계정과목명" cssclass="sta_WF_detailLabel" left="0" top="416" width="114" height="28"/>
+        <Static id="Static_28" taborder="9" text="지출계정과목명" cssclass="sta_WF_detailLabel" left="484" top="416" width="114" height="28"/>
+        <Static id="Static_01" taborder="10" text="설명" cssclass="sta_WF_detailLabel" left="0" top="470" width="114" bottom="5"/>
+        <Edit id="Edit_24" taborder="11" lengthunit="utf8" maxlength="20" left="117" top="393" width="117" height="20"/>
+        <Radio id="Radio00" taborder="12" columncount="2" codecolumn="codecolumn" datacolumn="datacolumn" left="603" top="393" width="115" height="20">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">차변</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">대변</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static01" taborder="13" text="상세" cssclass="sta_WF_title" left="0" top="364" width="161" height="22"/>
+        <Static id="Static_06" taborder="14" text="계정항목" cssclass="sta_WF_detailLabel" left="0" top="443" width="114" height="28"/>
+        <Static id="Static_07" taborder="15" text="정산계정여부" cssclass="sta_WF_detailLabel" left="484" top="443" width="114" height="28"/>
+        <Static id="Static_09" taborder="16" text="출납계정여부" cssclass="sta_WF_detailLabel" left="726" top="389" width="114" height="28"/>
+        <Edit id="Edit_01" taborder="17" lengthunit="utf8" maxlength="20" left="237" top="393" width="244" height="20"/>
+        <Radio id="Radio01" taborder="18" columncount="2" codecolumn="codecolumn" datacolumn="datacolumn" left="844" top="393" width="115" height="20">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">예</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">아니오</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Edit id="Edit_06" taborder="19" lengthunit="utf8" maxlength="20" left="117" top="420" width="344" height="20"/>
+        <Edit id="Edit_07" taborder="20" lengthunit="utf8" maxlength="20" left="600" top="420" width="340" height="20"/>
+        <CheckBox id="CheckBox00" taborder="21" left="465" top="420" width="16" height="20"/>
+        <CheckBox id="CheckBox01" taborder="22" left="943" top="420" width="16" height="20"/>
+        <TextArea id="TextArea00" taborder="23" scrollbars="alwaysvert" lengthunit="utf8" maxlength="500" left="117" top="474" right="15" bottom="9"/>
+        <Static id="Static_10" taborder="24" text="예산통제기준" cssclass="sta_WF_detailLabel" left="242" top="443" width="114" height="28"/>
+        <Static id="Static_11" taborder="25" text="내부거래여부" cssclass="sta_WF_detailLabel" left="726" top="443" width="114" height="28"/>
+        <Radio id="Radio02" taborder="26" columncount="2" codecolumn="codecolumn" datacolumn="datacolumn" left="844" top="447" width="115" height="20">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">예</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">아니오</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="Radio03" taborder="27" columncount="2" codecolumn="codecolumn" datacolumn="datacolumn" left="603" top="447" width="115" height="20">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">예</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">아니오</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Combo id="Combo1_01" taborder="28" innerdataset="@ds_JobM" codecolumn="code" datacolumn="data" left="117" top="447" width="121" height="20"/>
+        <Combo id="Combo1_02" taborder="29" innerdataset="@ds_JobM" codecolumn="code" datacolumn="data" left="359" top="447" width="121" height="20"/>
+        <Static id="Static06" taborder="38" visible="false" left="508" top="41" width="57" height="48" style="background:#ff634733;"/>
+        <Div id="div_grid_top" taborder="39" left="0" top="63" right="0" height="23" scrollbars="none">
+          <Layouts>
+            <Layout>
+              <Static id="sta_title" taborder="30" text="Records Found" cssclass="sta_WF_GridFound2" left="25" top="0" bottom="0" width="120"/>
+              <Static id="sta_total_cnt" taborder="31" text="0" cssclass="sta_WF_GridFound" left="0" top="0" bottom="0" width="20"/>
+              <Button id="btn_add" taborder="32" text="추가" cssclass="btn_WF_CRUD" top="0" right="106" width="50" height="23" domainId="nexa.add"/>
+              <Button id="btn_delete" taborder="33" text="삭제" cssclass="btn_WF_CRUD" top="0" right="53" width="50" height="23" domainId="nexa.delete"/>
+              <Button id="btn_save" taborder="34" text="저장" cssclass="btn_WF_CRUD" top="0" right="0" width="50" height="23" domainId="nexa.save"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_service" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="conid" type="STRING" size="256"/>
+          <Column id="key" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+          <Column id="Column4" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_List" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false" onrowposchanged="ds_List_onrowposchanged">
+        <ColumnInfo>
+          <Column id="CUST_CODE" type="STRING" size="255"/>
+          <Column id="BIZ_NAME" type="STRING" size="255"/>
+          <Column id="CUST_BIZ_NO" type="STRING" size="255"/>
+          <Column id="BIZ_ADRS" type="STRING" size="255"/>
+          <Column id="DEPT_NAME" type="STRING" size="255"/>
+          <Column id="PRTN_CUST_NAME" type="STRING" size="255"/>
+          <Column id="TEL_NO" type="STRING" size="255"/>
+          <Column id="TRAD_END_GUBUN" type="STRING" size="255"/>
+          <Column id="CUST_ENTR_CODE" type="STRING" size="255"/>
+          <Column id="EMAIL" type="STRING" size="255"/>
+          <Column id="POSITION" type="STRING" size="256"/>
+          <Column id="SEPR" type="STRING" size="256"/>
+          <Column id="POWER" type="STRING" size="256"/>
+          <Column id="WORK" type="STRING" size="256"/>
+          <Column id="SCHOOL" type="STRING" size="256"/>
+          <Column id="MAJOR" type="STRING" size="256"/>
+          <Column id="TERM" type="STRING" size="256"/>
+          <Column id="YEAR" type="STRING" size="256"/>
+          <Column id="IMAGE" type="STRING" size="256"/>
+          <Column id="DEV" type="STRING" size="256"/>
+          <Column id="KEEP" type="STRING" size="256"/>
+          <Column id="DEV_1" type="STRING" size="256"/>
+          <Column id="KEEP_1" type="STRING" size="256"/>
+          <Column id="MAN_1" type="STRING" size="256"/>
+          <Column id="LEA" type="STRING" size="256"/>
+          <Column id="SAAS" type="STRING" size="256"/>
+          <Column id="MAN" type="STRING" size="256"/>
+          <Column id="PRE" type="STRING" size="256"/>
+          <Column id="SEX" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+          <Column id="chk" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_JobM" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code"/>
+            <Col id="data">-----전체-------</Col>
+          </Row>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">음식 서비스</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">법률/경찰/교도</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">교육 및 자연과학대학</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">보건/의료</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">문화/예술/디자인</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="data">사회복지/종교</Col>
+          </Row>
+          <Row>
+            <Col id="code">7</Col>
+            <Col id="data">미용/스포츠</Col>
+          </Row>
+          <Row>
+            <Col id="code">8</Col>
+            <Col id="data">영업/판매</Col>
+          </Row>
+          <Row>
+            <Col id="code">9</Col>
+            <Col id="data">운전/운송</Col>
+          </Row>
+          <Row>
+            <Col id="code">10</Col>
+            <Col id="data">경비/청소</Col>
+          </Row>
+          <Row>
+            <Col id="code">11</Col>
+            <Col id="data">IT</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_multiLangData" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item24" compid="Edit_24" propid="value" datasetid="output" columnid="USER_ID"/>
+      <BindItem id="item1" compid="Edit_01" propid="value" datasetid="output" columnid="USER_ID"/>
+      <BindItem id="item6" compid="Edit_06" propid="value" datasetid="output" columnid="USER_ID"/>
+      <BindItem id="item7" compid="Edit_07" propid="value" datasetid="output" columnid="USER_ID"/>
+    </Bind>
+  </Form>
+</FDL>

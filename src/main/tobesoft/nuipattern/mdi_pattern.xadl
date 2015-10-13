@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.2">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="MDI_Main" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="nexacro.xtheme" onload="application_onload">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" left="0" top="0" width="1024" height="550" titletext="ABLE_Frame">
+        <VFrameSet id="VFrameSet" separatesize="80,0,*">
+          <Frames>
+            <ChildFrame id="TopFrame" formurl="frame::topFrame.xfdl" dragmovetype="none" showtitlebar="false" style="background:darkgray;border:1 solid #808080ff ;"/>
+            <ChildFrame id="LoginFrame" showtitlebar="false" showtitleicon="true" dragmovetype="none" formurl="frame::login.xfdl"/>
+            <HFrameSet id="HFrameSet" separatesize="195,*">
+              <Frames>
+                <ChildFrame id="LeftFrame" formurl="frame::leftFrame.xfdl" dragmovetype="none" showtitlebar="false" style="overlaycolor:white;background:darkgray;border:1 solid #808080ff ;color:white;bordertype:normal 0 0 ;" showcascadetitletext="true"/>
+                <VFrameSet id="VFrameSet1" separatesize="30,*">
+                  <Frames>
+                    <ChildFrame id="MdiTabFrame" formurl="frame::tabFrame.xfdl" showtitlebar="false" dragmovetype="none"/>
+                    <FrameSet id="WorkFrame" style="background:antiquewhite;">
+                      <Frames>
+                        <ChildFrame id="MainFrame" dragmovetype="none" resizable="false" showtitlebar="false" openstatus="maximize"/>
+                      </Frames>
+                    </FrameSet>
+                  </Frames>
+                </VFrameSet>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+  <Script type="xscript5.0"><![CDATA[/**********************************************************************************
+ *  공통  변수, 객체, 상수를 정의
+ **********************************************************************************/
+/* 공통처리에 사용할 컨트롤들의 기능 플래그(권한처리 시 사용)*/
+this.gv_loadCnt = 0;
+
+/* 메뉴정보 칼럼 변수*/
+/*
+ (index 0 ~ 3에 권한속성을 설정 자리순서대로 insert|update|delete|print 순으로 설정한 걸 가정(각 자리 "1":가능, "0": 불가능)
+ */
+this.gv_MenuIdCol = "MENU_ID"; //아이디
+this.gv_MenuNameCol = "MENU_NAME"; //명칭
+this.gv_MenuLvlCol = "MENU_LEVEL"; //레벨ㄴ
+this.gv_MenuGIdCol = "MENU_GRP"; //메뉴그룹
+this.gv_MenuStatCol = "MENU_STAT"; //메뉴상태 ('VIEW':표시, 'HIDE':미표시, 'MAKE':개발중)
+this.gv_MenuUrlCol = "PAGE_URL"; //페이지경로
+this.gv_MenuUrlID = "PAGE_ID";
+this.gv_MenuTypeCol = "PAGE_EXTP"; //페이지실행타입 'FORM': XPLATFORM 폼, 'LINK': 웹페이지, 'EXEC': 외부모듈 실행
+this.gv_MenuOPTPCol = "MENU_OPTP"; //메뉴오픈타입 (팝업, 메인)
+this.gv_MenuAuthCol = "MENU_AUTH"; //메뉴에 대한 권한
+this.gv_MenuArgCol = "MENU_ARGS"; //메뉴파라메터
+ct_menuIdCol ="MENU_ID"; //아이디
+ct_menuUrlCol = "PAGE_ID"; //페이지ID
+ct_menuNaviCol = "MENU_ARGS"; //페이지경로
+
+
+/* 열린메뉴정보 칼럼 변수*/
+this.gv_WinIdCol = "WIN_ID"; //윈도우(프레임)아이디(열린 메뉴의 윈도우 아이디)
+this.gv_TitleCol = "TITLE"; //타이틀
+this.gv_DescUrl = "Desc_Url"; //Description Url
+this.gv_DescUrl_ko = "Desc_Url_ko"; // //Description Url
+this.gv_openStatus = "maximize"; //새로운 프레임이 열려지는 상태
+this.gv_openOnlyOne = true; //동일한 메뉴를 하나 이상 오픈가능 여부(true:하나만 오픈, false:하나이상 오픈)
+this.gv_openMaxFrame = 10; //열리는 프레임 최대 갯수
+
+// 프레임셋 관련 변수
+this.gv_vFrameSet   = "";     
+this.gv_vFrameSet1  = "";
+this.gv_topFrame    = "";
+this.gv_workFrame   = "";
+this.gv_hFrameSet   = "";
+this.gv_leftFrame   = "";
+this.gv_mdiTabFrame = "";
+
+
+this.application_onload = function(obj:Application, e:nexacro.LoadEventInfo)
+{
+
+	gv_vFrameSet  = application.mainframe.VFrameSet;                       //VFrameSet
+    gv_vFrameSet1  = application.mainframe.VFrameSet.HFrameSet.VFrameSet1; //VFrameSet1
+	gv_topFrame   = application.mainframe.VFrameSet.TopFrame;              //TopFrame	
+	gv_workFrame  = application.mainframe.VFrameSet.HFrameSet.VFrameSet1.WorkFrame;         //WorkForm
+	gv_hFrameSet  = application.mainframe.VFrameSet.HFrameSet;             //HFrame
+	gv_leftFrame  = application.mainframe.VFrameSet.HFrameSet.LeftFrame;   //leftFrame	
+	gv_mdiTabFrame  = application.mainframe.VFrameSet.HFrameSet.VFrameSet1.MdiTabFrame;
+
+	///////////////////////로그인 창 띄우기///////////////////////////////////////////////
+	this.loginCheck();
+	////////////////////////////////////////////////////////////////////////////////////////
+}
+
+// 로그인 페이지 출력
+this.loginCheck = function()
+{
+    gv_vFrameSet.set_separatesize("0,*,0");
+}
+
+this.gfn_loadChk = function()
+{	
+	if( this.gv_loadCnt == 3 )
+	{
+		//trace( this.gv_loadCnt);
+	}  
+}
+]]></Script>
+</ADL>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Pilot">
+    <!-- 
+    <bannerLeft>
+        <name>Pilot</name>
+        <src>http://maven.apache.org/images/apache-maven-project.png
+        </src>
+        <href>http://maven.apache.org/</href>
+    </bannerLeft>
+    <bannerRight>
+        <src>http://maven.apache.org/images/maven-small.gif</src>
+    </bannerRight>
+     -->
+    <body>
+
+        <menu ref="reports" />
+
+    </body>
+</project>
