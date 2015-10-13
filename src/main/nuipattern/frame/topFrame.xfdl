@@ -5,7 +5,7 @@
     <Layouts>
       <Layout>
         <ImageViewer id="ImageViewer00" taborder="0" left="1" top="1" width="192" height="77" image="URL('images::nexacro_platform.png')"/>
-        <Static id="Static00" taborder="1" text="   ABLE_Frame 유형별 화면샘플" left="196" top="5" right="4" height="72" style="background:darkgray;font:bold 30 Microsoft Sans Serif;" visible="true"/>
+        <Static id="Static00" taborder="1" text="   nexacro 유형별 화면샘플" left="196" top="5" right="4" height="72" style="background:darkgray;font:bold 30 Microsoft Sans Serif;" visible="true"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.0"><![CDATA[/************************************************************************************************

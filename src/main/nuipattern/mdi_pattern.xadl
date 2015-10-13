@@ -4,7 +4,7 @@
   <GlobalVariables url="globalvars.xml"/>
   <Application id="MDI_Main" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="nexacro.xtheme" onload="application_onload">
     <Layout>
-      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" left="0" top="0" width="1024" height="550" titletext="ABLE_Frame">
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" left="0" top="0" width="1024" height="550" titletext="nexacro-sample">
         <VFrameSet id="VFrameSet" separatesize="80,0,*">
           <Frames>
             <ChildFrame id="TopFrame" formurl="frame::topFrame.xfdl" dragmovetype="none" showtitlebar="false" style="background:darkgray;border:1 solid #808080ff ;"/>
