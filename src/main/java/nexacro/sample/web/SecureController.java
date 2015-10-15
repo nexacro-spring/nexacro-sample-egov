@@ -38,7 +38,7 @@ import com.nexacro.xapi.data.PlatformData;
 @Controller
 public class SecureController {
 
-	private Logger log = LoggerFactory.getLogger(SecureController.class);
+	private static final Logger log = LoggerFactory.getLogger(SecureController.class);
 	
     // @Autowired(required = false) // Type 정의
     @Resource(name = "sampleService")

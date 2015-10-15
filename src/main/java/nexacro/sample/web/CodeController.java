@@ -37,7 +37,7 @@ import com.nexacro.spring.data.NexacroResult;
 @Controller
 public class CodeController  {
 
-	private Logger log = LoggerFactory.getLogger(AdvancedFileController.class);
+	private static final Logger log = LoggerFactory.getLogger(AdvancedFileController.class);
 	
     @Resource(name = "codeService")
     private CodeService codeService;

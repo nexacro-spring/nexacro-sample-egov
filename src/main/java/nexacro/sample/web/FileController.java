@@ -53,7 +53,7 @@ public class FileController {
     @Autowired
     private WebApplicationContext appContext;
 
-	private Logger log = LoggerFactory.getLogger(FileController.class);
+    private static final Logger log = LoggerFactory.getLogger(FileController.class);
     
     private static final String SP = File.separator;
     private static final String PREFIX = "file-";

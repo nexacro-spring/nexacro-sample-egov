@@ -35,7 +35,7 @@ import com.nexacro.xapi.tx.PlatformType;
 @Controller
 public class LargeDataController {
 
-	private Logger log = LoggerFactory.getLogger(LargeDataController.class);
+	private static final Logger log = LoggerFactory.getLogger(LargeDataController.class);
 	
     // @Autowired(required = false) // Type 정의
     @Resource(name = "largeDataService")

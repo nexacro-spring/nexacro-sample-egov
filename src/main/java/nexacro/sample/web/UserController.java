@@ -42,7 +42,7 @@ import com.nexacro.xapi.data.PlatformData;
 @Controller
 public class UserController {
 	
-	private Logger log = LoggerFactory.getLogger(UserController.class);
+	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     // @Autowired(required = false) // Type 정의
     @Resource(name = "userService")
