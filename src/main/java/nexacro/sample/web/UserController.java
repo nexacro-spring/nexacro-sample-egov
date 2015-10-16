@@ -14,9 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.nexacro.spring.annotation.ParamDataSet;
+import com.nexacro.spring.context.NexacroContext;
+import com.nexacro.spring.context.NexacroContextHolder;
 import com.nexacro.spring.data.NexacroResult;
-import com.nexacro.spring.servlet.NexacroContext;
-import com.nexacro.spring.servlet.NexacroContextHolder;
 import com.nexacro.xapi.data.Debugger;
 import com.nexacro.xapi.data.PlatformData;
 

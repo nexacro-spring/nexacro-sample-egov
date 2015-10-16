@@ -31,7 +31,7 @@
 		</RollingFile>
     </Appenders>
     <Loggers>
-        <Logger name="java.sql" level="INFO" additivity="false">
+        <Logger name="java.sql" level="DEBUG" additivity="false">
             <AppenderRef ref="console" />
         </Logger>
         <Logger name="egovframework" level="DEBUG" additivity="false">
