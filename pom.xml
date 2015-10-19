@@ -80,7 +80,7 @@
     </build>
 
     <properties>
-        <jdk.version>1.6</jdk.version>
+        <jdk.version>1.7</jdk.version>
         <spring.maven.artifact.version>4.0.9.RELEASE</spring.maven.artifact.version>
         <egovframework.rte.version>3.5.0</egovframework.rte.version>
     </properties>    
