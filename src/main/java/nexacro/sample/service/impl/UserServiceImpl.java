@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import com.nexacro.spring.data.DataSetRowTypeAccessor;
 import com.nexacro.xapi.data.DataSet;
 
+import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+
 /**
  * <pre>
  * Test를 위한 ServiceImpl Sample Class
@@ -33,7 +35,7 @@ import com.nexacro.xapi.data.DataSet;
  * </pre>
  */
 @Service("userService")
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends EgovAbstractServiceImpl implements UserService {
 
     /**
      * UserDAO class 선언 (UserDAO) Class Injection)

@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.nexacro.spring.data.NexacroFirstRowHandler;
 
+import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+
 /**
  * <pre>
  * Test를 위한 ServiceImpl Sample Class
@@ -29,7 +31,7 @@ import com.nexacro.spring.data.NexacroFirstRowHandler;
  * </pre>
  */
 @Service("largeDataService")
-public class LargeServiceImpl implements LargeDataService {
+public class LargeServiceImpl extends EgovAbstractServiceImpl implements LargeDataService {
 
     @Resource(name = "largeDataDAO")
     private LargeDataDAO largeDataDAO;

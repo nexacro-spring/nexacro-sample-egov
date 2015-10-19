@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import com.nexacro.spring.data.DataSetRowTypeAccessor;
 import com.nexacro.xapi.data.DataSet;
 
+import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+
 /**
  * <pre>
  * Test를 위한 ServiceImpl Sample Class
@@ -33,7 +35,7 @@ import com.nexacro.xapi.data.DataSet;
  * </pre>
  */
 @Service("codeService")
-public class CodeServiceImpl implements CodeService {
+public class CodeServiceImpl extends EgovAbstractServiceImpl implements CodeService {
 
     @Resource(name = "codeDAO")
     private CodeDAO codeDAO;
