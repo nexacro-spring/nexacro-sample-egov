@@ -22,9 +22,10 @@
 	    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
 	<!-- LocaleResolver 선언 끝 -->
 
-
 	<!-- nexacro config -->
     <bean id="nexacroInterceptor" class="com.nexacro.spring.servlet.NexacroInterceptor"/>
+    
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
     
     <!-- nexacro method argument resolver -->
     <bean id="nexacroMethodArgumentResolver" class="com.nexacro.spring.resolve.NexacroMethodArgumentResolver">
