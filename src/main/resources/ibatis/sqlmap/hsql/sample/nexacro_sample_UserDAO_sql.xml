@@ -69,13 +69,21 @@
                 PASSWORD,
                 USER_NAME,
                 EN_NAME,
-                COMP_PHONE
+                COMP_PHONE,
+                EMAIL,
+                PHONE,
+                CELL_PHONE,
+                ZIP_CODE
             ) VALUES (
                 #userId#,
                 #password#,
                 #userName#,
                 #enName#,
-                #compPhone#
+                #compPhone#,
+                #email#,
+                #phone#,
+                #cellPhone#,
+                #zipCode#
             )
         ]]>
     </insert>
