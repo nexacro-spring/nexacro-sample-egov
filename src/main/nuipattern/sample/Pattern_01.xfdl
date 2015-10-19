@@ -30,7 +30,7 @@
               <Static id="stc_id" taborder="25" text="ID" left="3.18%" top="14" right="76.29%" height="30" style="background:lavender URL('images://ico_bullet.gif') left middle;padding:1px 1px 1px 10;font:9 Dotum;" class="sub_title"/>
               <Static id="Static01" taborder="26" text="EngName" left="52.58%" top="59" right="27.02%" height="30" style="background:lavender;padding:0 0 0 10;font:9 Dotum;"/>
               <Static id="Static07" taborder="32" text="Phone" left="3.18%" top="145" right="76.29%" height="30" style="background:lavender;padding:0 0 0 10;font:9 Dotum;"/>
-              <Edit id="edt_id" taborder="33" left="25.29%" top="15" right="50%" height="34"/>
+              <Edit id="edt_id" taborder="33" left="25.29%" top="15" right="50%" height="34" oneditclick="divInput_edt_id_oneditclick"/>
               <Edit id="edtEngName" taborder="41" left="74.51%" top="56" right="0.78%" height="34"/>
               <Static id="stc_name" taborder="42" text="FullName" left="3.18%" top="58" right="76.29%" height="30" style="background:lavender URL('images://ico_bullet.gif') left middle;padding:1px 1px 1px 10;font:9 Dotum;" class="sub_title"/>
               <Edit id="edt_fullName" taborder="43" left="25.3%" top="59" right="50.07%" height="34"/>
@@ -61,13 +61,14 @@
       </Dataset>
       <Dataset id="ds_user" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
         <ColumnInfo>
-          <Column id="title" type="STRING" size="256"/>
-          <Column id="regId" type="STRING" size="256"/>
-          <Column id="postId" type="STRING" size="256"/>
-          <Column id="contents" type="STRING" size="256"/>
-          <Column id="communityId" type="STRING" size="256"/>
-          <Column id="regDate" type="DATE" size="256"/>
-          <Column id="hitCount" type="STRING" size="256"/>
+          <Column id="userId" type="STRING" size="256"/>
+          <Column id="password" type="STRING" size="256"/>
+          <Column id="userName" type="STRING" size="256"/>
+          <Column id="enName" type="STRING" size="256"/>
+          <Column id="email" type="STRING" size="256"/>
+          <Column id="phone" type="DATE" size="256"/>
+          <Column id="cellPhone" type="STRING" size="256"/>
+          <Column id="zipCode" type="STRING" size="256"/>
         </ColumnInfo>
       </Dataset>
     </Objects>
@@ -104,7 +105,7 @@ include "lib::comLib.xjs";
 /***********************************************************************
  form 변수 선언
 ************************************************************************/
-var saveFlag=true;
+var saveFlag = true;
 
 /*----------------------------------------------------------------------
 * 기   능:	form onload 함수
@@ -165,8 +166,9 @@ this.fn_delete = function(obj:Button,  e:nexacro.ClickEventInfo)
 	this.ds_user.deleteRow(nRow);
 	var rtnValue = Ex.core.comMsg("confirm","삭제 하시겠습니까?");
 	
-	if(rtnValue){
-		saveFlag=false;
+	if(rtnValue)
+	{
+		saveFlag = false;
 		this.fn_save();
 	}
 	else
@@ -205,7 +207,7 @@ this.fn_callBack = function (strSvcId, nErrorCode, strErrorMsg)
 { 
 	if (nErrorCode < 0) 
 	{
-		return Ex.core.comMsg("alert",strErrorMsg);		
+		return Ex.core.comMsg("alert", strErrorMsg);		
 	}
 	
 	if (strSvcId == "search") 
@@ -215,13 +217,14 @@ this.fn_callBack = function (strSvcId, nErrorCode, strErrorMsg)
 	
 	if (strSvcId == "save") 
 	{
-		if(saveFlag){
-			Ex.core.comMsg("alert","저장완료.");
+		if (saveFlag)
+		{
+			Ex.core.comMsg("alert", "저장완료.");
 		}
 		else
 		{
-			saveFlag=true;
-			Ex.core.comMsg("alert","삭제완료.");
+			saveFlag = true;
+			Ex.core.comMsg("alert", "삭제완료.");
 		}
 		this.div_search.edt_searchKeyword.set_value(this.edt_fullName.value);
 		this.fn_search();
