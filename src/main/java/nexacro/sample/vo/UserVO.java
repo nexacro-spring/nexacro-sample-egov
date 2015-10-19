@@ -1,5 +1,11 @@
 package nexacro.sample.vo;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.apache.logging.log4j.core.config.plugins.validation.constraints.Required;
+
 
 /**
  * <pre>
@@ -24,9 +30,25 @@ package nexacro.sample.vo;
 public class UserVO extends DefaultVO {
 
     // Fields
+	@Required
+	@NotNull
+	@Size(min = 4, max = 20, message = "4글자 이상의 ID를 입력하세요. (Null 허용 안함)")
     private String userId;
-    private String userName;
-    private String enName;
+	
+	@Required
+	@NotNull
+	@Size(max = 20, message = "이름을 입력하세요. (Null 허용 안함)")
+	private String userName;
+	
+	@Required
+	@NotNull
+	@Size(min = 4, max = 50, message = "4글자 이상의 Password를 입력하세요. (Null 허용 안함)")
+	private String password;
+
+	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "이메일 형식이 잘못되었습니다.")
+    private String email;
+	
+	private String enName;
     private String compPhone;
     private String phone;
     private String cellPhone;
@@ -39,9 +61,18 @@ public class UserVO extends DefaultVO {
     private String address;
     private String compZipCode;
     private String compAddress;
-    private String email;
     private String deptId;
-    private String password;
+    
+    public UserVO() {
+		;
+	}
+    
+    public UserVO(String userName, String userId, String password, String email) {
+    	this.userName = userName;
+    	this.userId = userId;
+    	this.password = password;
+    	this.email = email;
+	}
     
     /**
      * @return the userId
