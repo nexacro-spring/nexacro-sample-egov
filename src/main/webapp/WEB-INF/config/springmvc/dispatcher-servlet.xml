@@ -18,14 +18,12 @@
     </context:component-scan>
 
 	<!-- LocaleResolver 선언 시작 -->
-	    <!-- multi language message Resolver request가 가지고 있는 session으로 부터 locale 정보를 가져온다 -->
-	    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+    <!-- multi language message Resolver request가 가지고 있는 session으로 부터 locale 정보를 가져온다 -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
 	<!-- LocaleResolver 선언 끝 -->
 
 	<!-- nexacro config -->
     <bean id="nexacroInterceptor" class="com.nexacro.spring.servlet.NexacroInterceptor"/>
-    
-    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
     
     <!-- nexacro method argument resolver -->
     <bean id="nexacroMethodArgumentResolver" class="com.nexacro.spring.resolve.NexacroMethodArgumentResolver">
@@ -85,8 +83,6 @@
 <!-- nexacro config finish -->
 
 
-<!-- Interceptor 선언 끝 -->
-
 
 	<!-- HandlerMappings 선언 시작 (org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping) -->
 	   <!-- set interceptor of AnnotationHandlerMapping
@@ -102,9 +98,7 @@
             </list>
         </property>
     </bean>   
-
-     
-<!-- HandlerMappings 선언 끝 -->
+	<!-- HandlerMappings 선언 끝 -->
 
 
 
@@ -141,19 +135,22 @@
     </bean>
 
 	<!-- Hibernate Validation -->
-	<!-- 
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
         <property name="validationMessageSource" ref="messageSource" />
     </bean>
-     -->
      
     <!-- 
     <bean id="propertyEditorRegistrar" class="able.com.web.CustomPropertyEditorRegistrar" />
  	-->
     
-    
+     <!-- Multipart Resolver
+	      최대 10메가 바이트(정확히 10메가는 아니지만)까지 업로드가 가능하도록 설정
+	  -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="100000000" />
+        <property name="maxInMemorySize" value="100000000" />
+    </bean>  
 
-<!-- ViewResolver 선언 시작 -->
     <!--
         - 추가적인 어떤 맵핑 작업을 하지 않고 URL의 상징적인 view 이름을 사용하는 ViewResolver
         - 단순 JSP만 사용할 경우 사용이 가능하다.
@@ -167,8 +164,6 @@
         p:viewClass="org.springframework.web.servlet.view.JstlView"
         p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/>
      
-<!-- ViewResolver 선언 끝 -->
-
     <!-- Controller에서 처리 로직이 없이 바로 view로 이동하는 경우에 사용하는 Controller
        DispatcherServlet을 거쳐야 하지만, html 위주의 static한 페이지를 보여줄때 사용
        URL path가 곧 뷰이름이 되며, prefix와 suffix를 지정할수도 있다.
