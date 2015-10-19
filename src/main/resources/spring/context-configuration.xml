@@ -6,6 +6,22 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 	   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+	
+	<!-- configuration bean. xml|properties| -->
+	<bean id="projectConfiguration" class="org.apache.commons.configuration.XMLConfiguration">
+		<constructor-arg type="java.lang.String">
+			<value>config/project-configuration.xml</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- composite configuration -->
+	<bean id="compositeConfiguration" class="org.apache.commons.configuration.CompositeConfiguration">
+        <constructor-arg>
+            <list>
+                <ref bean="projectConfiguration"/>
+            </list>
+        </constructor-arg>
+    </bean>
 
 	<bean id="propertyPlaceholderConfigurer" class="org.jasypt.spring3.properties.EncryptablePropertyPlaceholderConfigurer">
         <constructor-arg ref="configurationEncryptor" />
@@ -13,7 +29,7 @@
             <bean class="org.springmodules.commons.configuration.CommonsConfigurationFactoryBean">
                <property name="configurations">
                     <list>
-                         <ref bean="configuration"/>
+                         <ref bean="compositeConfiguration"/>
                     </list>
                 </property>
             </bean>
@@ -23,7 +39,8 @@
 	<!-- encryptor config -->
     <bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
         <property name="config" ref="environmentVariablesConfiguration" />
-        <!-- 아래 environmentVariablesConfigurationdml passwordEnvName을 사용할 경우 삭제. 테스트용으로 사용 -->
+        <!-- 테스트시에만 password를 사용하여 처리 한다.
+         environmentVariablesConfiguration passwordEnvName로 환경변수로 사용하여 처리.-->
         <property name="password" value="7cxna10re0o" />
     </bean>       
 
@@ -31,17 +48,5 @@
         <property name="algorithm" value="PBEWithMD5AndDES" />
         <property name="passwordEnvName" value="APP_ENCRYPTION_PASSWORD" />
     </bean>       
-
-    <bean id="configuration" class="org.apache.commons.configuration.CompositeConfiguration">
-        <constructor-arg>
-            <list>
-                <bean class="org.apache.commons.configuration.XMLConfiguration">
-                    <constructor-arg type="java.lang.String">
-                        <value>config/project-configuration.xml</value>
-                    </constructor-arg>
-                </bean>
-            </list>
-        </constructor-arg>
-    </bean>
 
 </beans>
