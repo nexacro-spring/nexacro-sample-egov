@@ -1,6 +1,7 @@
 package nexacro.sample.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -69,6 +70,11 @@ public class SampleServiceImpl implements SampleService {
     public List<SampleVO> selectSampleVOList(SampleVO searchVO) {
         return sampleDAO.selectSampleVoList(searchVO);
     }
+    
+    @Override
+	public List<Map> selectSampleMapList(SampleVO searchVO) {
+    	return sampleDAO.selectSampleMapList(searchVO);
+	}
 
     public void insertSampleVO(SampleVO sample) {
         sampleDAO.insertSampleVO(sample);

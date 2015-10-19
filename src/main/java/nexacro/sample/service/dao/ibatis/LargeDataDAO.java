@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.nexacro.spring.dao.ibatis.NexacroIbatisAbstractDAO;
 import com.nexacro.spring.data.NexacroFirstRowHandler;
 
 /**

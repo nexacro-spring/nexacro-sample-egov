@@ -6,6 +6,8 @@ import nexacro.sample.vo.UserVO;
 
 import org.springframework.stereotype.Repository;
 
+import com.nexacro.spring.dao.ibatis.NexacroIbatisAbstractDAO;
+
 /**
  * <pre>
  * Test를 위한 DAO Sample Class

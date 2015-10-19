@@ -50,7 +50,7 @@
             
     </select>
     
-    <select id="sampleDAO.selectSampleVOMap" parameterClass="sampleVO" resultMap="sampleMap">
+    <select id="sampleDAO.selectSampleMapList" parameterClass="sampleVO" resultMap="sampleMap">
             SELECT
                 A.TITLE AS TITLE, 
                 A.REG_ID AS REG_ID, 
@@ -60,7 +60,7 @@
                 A.COMMUNITY_ID AS COMMUNITY_ID,
                 A.HIT_COUNT AS HIT_COUNT
             FROM TB_BOARD A
-            WHERE 1=1
+            WHERE 1=0
             <dynamic>
                 <isNotNull prepend=" AND " property="title">
                 	TITLE LIKE '%' || #title# || '%'

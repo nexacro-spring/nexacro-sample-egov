@@ -24,11 +24,12 @@
 	    </property>
 	</bean>
 	
-	
+	<!-- 
 	<bean id="ibatisMetaDataProvider" class="com.nexacro.spring.dao.ibatis.NexacroIbatisMetaDataProvider" >
 		<property name="dbmsProvider" ref="dbmsProvider" />
 	</bean>
-
+ 	-->
+ 
 	<!-- 	
 	<aop:aspectj-autoproxy proxy-target-class="true"/>
     <aop:config >

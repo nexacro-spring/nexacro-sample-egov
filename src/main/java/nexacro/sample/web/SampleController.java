@@ -80,6 +80,30 @@ public class SampleController {
         return result;
     }
     
+    @RequestMapping(value = "/sampleSelectVOFromMap.do")
+    public NexacroResult selectVoFromMap(
+    		@ParamDataSet(name="ds_search") List<SampleVO> searchVOList
+    		, @ParamDataSet(name="__DS_PARAM_INFO__") List<Map> defaultList
+    		, PlatformData platformData){
+    	
+    	if (log.isDebugEnabled()) {
+    		System.out.println("SampleController.selectVo()");
+    		log.debug("SampleController.selectVoFromMap(). data="+new Debugger().detail(platformData));
+    	}
+    	
+    	SampleVO searchVo = null;
+    	if(searchVOList != null && searchVOList.size() > 0) {
+    		searchVo = searchVOList.get(0);
+    	}
+    	
+    	List<Map> sampleList = sampleService.selectSampleMapList(searchVo);
+    	
+    	NexacroResult result = new NexacroResult();
+    	result.addDataSet("output1", sampleList);
+    	
+    	return result;
+    }
+    
     @RequestMapping(value = "/sampleModifyVO.do")
     public NexacroResult modifyVO(
                             @ParamDataSet(name="input1") List<SampleVO> modifyList

@@ -7,6 +7,8 @@ import nexacro.sample.vo.GroupCodeVO;
 
 import org.springframework.stereotype.Repository;
 
+import com.nexacro.spring.dao.ibatis.NexacroIbatisAbstractDAO;
+
 /**
  * <pre>
  * Test를 위한 DAO Sample Class

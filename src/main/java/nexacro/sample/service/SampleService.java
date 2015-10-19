@@ -1,6 +1,7 @@
 package nexacro.sample.service;
 
 import java.util.List;
+import java.util.Map;
 
 import nexacro.sample.vo.SampleVO;
 
@@ -28,6 +29,9 @@ public interface SampleService {
 
     List<SampleVO> selectSampleVOList(SampleVO searchVO);
 
+    List<Map> selectSampleMapList(SampleVO searchVo);
+    
     void modifyMultiSampleVO(List<SampleVO> modifyList);
+
 
 }

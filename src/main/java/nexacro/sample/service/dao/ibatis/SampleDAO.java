@@ -1,10 +1,13 @@
 package nexacro.sample.service.dao.ibatis;
 
 import java.util.List;
+import java.util.Map;
 
 import nexacro.sample.vo.SampleVO;
 
 import org.springframework.stereotype.Repository;
+
+import com.nexacro.spring.dao.ibatis.NexacroIbatisAbstractDAO;
 
 /**
  * <pre>
@@ -28,12 +31,12 @@ import org.springframework.stereotype.Repository;
 @Repository("sampleDAO")
 public class SampleDAO extends NexacroIbatisAbstractDAO {
 
-//	@Resource(name="sampleDAO")
-//	private SampleDAO self;
-	
     public List<SampleVO> selectSampleVoList(SampleVO searchVO) {
     	return (List<SampleVO>) list("sampleDAO.selectSampleVOList", searchVO);
-//    	return (List<SampleVO>) self.list("sampleDAO.selectSampleVOList", searchVO);
+    }
+    
+    public List<Map> selectSampleMapList(SampleVO searchVO) {
+    	return (List<Map>) list("sampleDAO.selectSampleMapList", searchVO);
     }
 
     public void insertSampleVO(SampleVO sample) {
