@@ -31,7 +31,7 @@
         <!-- 
         <property name="convertListeners">
             <list>
-                <ref bean="nexacroSecurityListener" />
+                <ref bean="nexacroListener" />
             </list>
         </property>
         -->
