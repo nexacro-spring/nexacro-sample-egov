@@ -1,5 +1,7 @@
 package nexacro.sample.test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,6 @@ import javax.validation.ValidatorFactory;
 import nexacro.sample.service.UserService;
 import nexacro.sample.vo.UserVO;
 
-import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,13 +24,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:spring/context-*.xml" } )
-public class UserControllerTest {
+@ContextConfiguration(locations = { "classpath*:spring/context-*.xml" })
+public class UserServiceTest {
 
 	@Resource(name = "userService")
-	private UserService	userService;
-	
-	private static Validator validator;
+	private UserService			userService;
+
+	private static Validator	validator;
 
 	@Before
 	public void setUp() throws Exception {
@@ -62,31 +63,50 @@ public class UserControllerTest {
 			assertTrue(false);
 		}
 	}
-	
+
 	@Test
-	public void testModifyUserVO() {
-		UserVO[] successUserVO = { 
-				new UserVO("test1", "test1", "test1", "test1@tobesoft.com") }; // 성공
-			
-		UserVO[] failUserVO = { 
-				new UserVO("testtesttesttesttest", "test1", "test1", "test1@tobesoft.com"), // 이름 20자 초과
-				new UserVO("test1", "te", "test1", "test1@tobesoft.com"), // 아이디 네 글자 미만
-				new UserVO("test1", "test1", "te", "test1@tobesoft.com"), // 패스워드 네 글자 미만
-				new UserVO("test1", "test1", "test1", "test1tobesoft.com") }; // 이메일 유효성 검사 실패
-		
-		for (int i = 0; i < successUserVO.length; i++) {
-			if (validate(successUserVO[i])) {
-				assertTrue(true);
-			}
-		}
-		
-		for (int i = 0; i < failUserVO.length; i++) {
-			if (!validate(failUserVO[i])) {
-				assertFalse(false);
-			}
-		}
+	public void testValidatingModifyUserVO() {
+		UserVO userVO = new UserVO(); // 성공
+		userVO.setUserName("test1");
+		userVO.setUserId("test1");
+		userVO.setPassword("test1");
+		userVO.setEmail("test1@tobesoft.com");
+		assertTrue(validate(userVO));
 	}
 
+	@Test
+	public void testModifyUserVOWithWrongValues() {
+		UserVO userVO = new UserVO();
+		userVO.setUserName("testtesttesttesttestttt"); // 이름 20자 초과
+		userVO.setUserId("test1");
+		userVO.setPassword("test1");
+		userVO.setEmail("test1@tobesoft.com");
+		assertFalse(validate(userVO));
+
+		userVO.setUserName("test1");
+		userVO.setUserId("te"); // 아이디 네 글자 미만
+		userVO.setPassword("test1");
+		userVO.setEmail("test1@tobesoft.com");
+		assertFalse(validate(userVO));
+
+		userVO.setUserName("test1");
+		userVO.setUserId("test1");
+		userVO.setPassword("te"); // 패스워드 네 글자 미만
+		userVO.setEmail("test1@tobesoft.com");
+		assertFalse(validate(userVO));
+
+		userVO.setUserName("test1");
+		userVO.setUserId("test1");
+		userVO.setPassword("te");
+		userVO.setEmail("test1tobesoft.com"); // 이메일 유효성 검사 실패
+		assertFalse(validate(userVO));
+	}
+
+	/**
+	 * validate
+	 * @param user
+	 * @return
+	 */
 	private boolean validate(UserVO user) {
 		Set<ConstraintViolation<UserVO>> constraintViolations = validator.validate(user);
 		for (ConstraintViolation<UserVO> constraintViolation : constraintViolations) {
