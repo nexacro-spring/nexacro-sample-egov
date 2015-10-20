@@ -95,22 +95,14 @@ public class UserController {
 	@RequestMapping(value = "/userModifyVO.do")
 	public NexacroResult modifyVO(
 			@ParamDataSet(name = "input1") List<UserVO> modifyList, 
-			PlatformData platformData) {
+			PlatformData platformData) throws NexacroException {
 		
 		if (log.isDebugEnabled()) {
 			System.out.println("UserController.modifyVO");
 			log.debug("UserController.selectVo(). data=" + new Debugger().detail(platformData));
 		}
 		
-		BindingResult bindingResult = null;
-		for (UserVO userVO : modifyList) {
-			bindingResult = new BeanPropertyBindingResult(userVO, "userVO");
-			validator.validate(userVO, bindingResult);
-			if (bindingResult.hasErrors()) {
-				String errorMessages = getErrorMessages(bindingResult);
-				return getNexacroResult(errorMessages);
-			}
-		}
+		validate(modifyList);
 
 		userService.modifyMultiUserVO(modifyList);
 
@@ -118,27 +110,29 @@ public class UserController {
 
 		return result;
 	}
-	
-	/**
-	 * getNexacroResult
-	 * @param errorMessages
-	 * @return
-	 */
-	private NexacroResult getNexacroResult(String errorMessages) {
-		NexacroException nexacroException = new NexacroException(errorMessages);
-		try {
-			throw nexacroException;
-		} catch (NexacroException e) {
-			e.printStackTrace();
-		}
-		
-		NexacroResult nexacroResult = new NexacroResult();
-		nexacroResult.setErrorCode(nexacroException.getErrorCode());
-		nexacroResult.setErrorMsg(nexacroException.getErrorMsg());
-		
-		return nexacroResult;
-	}
 
+	/**
+	 * validate
+	 * @param modifyList
+	 * @throws NexacroException
+	 */
+	private void validate(List<UserVO> modifyList) throws NexacroException {
+		BindingResult bindingResult = null;
+		for (UserVO userVO : modifyList) {
+			bindingResult = new BeanPropertyBindingResult(userVO, "userVO");
+			validator.validate(userVO, bindingResult);
+			if (bindingResult.hasErrors()) {
+				String errorMessages = getErrorMessages(bindingResult);
+
+				NexacroException nexacroException = new NexacroException(errorMessages);
+				nexacroException.setErrorCode(NexacroException.DEFAULT_ERROR_CODE);
+				nexacroException.setErrorMsg(errorMessages);
+
+				throw nexacroException;
+			}
+		}
+	}
+	
 	/**
 	 * getErrorMessages
 	 * @param bindingResult
@@ -147,8 +141,7 @@ public class UserController {
 		StringBuffer sb = new StringBuffer();
 		
 		for (ObjectError error : bindingResult.getAllErrors()) {
-			sb.append("code : ").append(error.getCode())
-			  .append(", messages : ").append(error.getDefaultMessage()).append("\n");
+			sb.append(error.getDefaultMessage()).append("\n");
 		}
 		
 		return sb.toString();

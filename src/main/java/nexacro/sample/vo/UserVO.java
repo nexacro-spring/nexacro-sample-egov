@@ -32,20 +32,20 @@ public class UserVO extends DefaultVO {
     // Fields
 	@Required
 	@NotNull
-	@Size(min = 4, max = 20, message = "4글자 이상의 ID를 입력하세요. (Null 허용 안함)")
+	@Size(min = 4, max = 20, message = "Please, Enter your id at least 4 Characters.")
     private String userId;
 	
 	@Required
 	@NotNull
-	@Size(max = 20, message = "이름을 입력하세요. (Null 허용 안함)")
+	@Size(max = 20, message = "Please, Enter your name.")
 	private String userName;
 	
 	@Required
 	@NotNull
-	@Size(min = 4, max = 50, message = "4글자 이상의 Password를 입력하세요. (Null 허용 안함)")
+	@Size(min = 4, max = 50, message = "Please, Enter your password at least 4 Characters.")
 	private String password;
 
-	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "이메일 형식이 잘못되었습니다.")
+	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "Please, Verify your e-mail address.")
     private String email;
 	
 	private String enName;
@@ -62,17 +62,6 @@ public class UserVO extends DefaultVO {
     private String compZipCode;
     private String compAddress;
     private String deptId;
-    
-    public UserVO() {
-		;
-	}
-    
-    public UserVO(String userName, String userId, String password, String email) {
-    	this.userName = userName;
-    	this.userId = userId;
-    	this.password = password;
-    	this.email = email;
-	}
     
     /**
      * @return the userId
@@ -329,6 +318,4 @@ public class UserVO extends DefaultVO {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    
 }
