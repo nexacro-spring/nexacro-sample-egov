@@ -14,10 +14,6 @@
     <url>http://maven.apache.org</url>
     <organization>
         <name>nexacro-sample Dev Group</name>
-        <!-- 
-        <url>http://localhost:8080/nexacro_able_sample</url>
-        <logo>http://localhost:8080/nexacro_able_sample/logo.jpg</logo>
-         -->
     </organization>
     <description>Description of nexacro-sample-egov</description>
 

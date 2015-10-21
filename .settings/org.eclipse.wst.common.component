@@ -14,7 +14,7 @@
         <dependent-module archiveName="nexacro-orm-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/nexacro-orm/nexacro-orm">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="java-output-path" value="/nexacro_able_sample/target/classes"/>
+        <property name="java-output-path" value="/nexacro-sample-egov/target/classes"/>
         <property name="context-root" value="nexacro-sample-egov"/>
     </wb-module>
 </project-modules>

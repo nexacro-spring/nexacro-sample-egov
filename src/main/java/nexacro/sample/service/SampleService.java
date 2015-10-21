@@ -29,7 +29,7 @@ public interface SampleService {
 
     List<SampleVO> selectSampleVOList(SampleVO searchVO);
 
-    List<Map> selectSampleMapList(SampleVO searchVo);
+    List<Map> selectSampleMapList(SampleVO searchVO);
     
     void modifyMultiSampleVO(List<SampleVO> modifyList);
 

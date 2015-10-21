@@ -60,13 +60,12 @@
      <!-- XENI (nexacro) Request Mapping -->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
     <bean id="xeniUrlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" p:order="0">
+        <!-- 
         <property name="interceptors">
             <list>
-                <!-- <ref bean="ableInterceptor" /> -->
-                <!-- for xeni multipart -->
-                <!-- <ref bean="webSecurityInterceptor" /> -->
             </list>
         </property>
+         -->
         <property name="mappings">
             <props>
                 <prop key="/XExportImport.do">xeniWrappingController</prop>
@@ -141,10 +140,6 @@
          -->
     </bean>
      
-    <!-- 
-    <bean id="propertyEditorRegistrar" class="able.com.web.CustomPropertyEditorRegistrar" />
- 	-->
-    
      <!-- Multipart Resolver
 	      최대 10메가 바이트(정확히 10메가는 아니지만)까지 업로드가 가능하도록 설정
 	  -->
