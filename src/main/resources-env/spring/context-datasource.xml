@@ -7,9 +7,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">   
-
     <!-- ENV -->
-
     <!-- hsql 메모리 DBMS -->
     <jee:jndi-lookup id="dataSource" jndi-name="jndiname" resource-ref="true"/>
     
