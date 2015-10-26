@@ -27,7 +27,6 @@
     
     <!-- nexacro method argument resolver -->
     <bean id="nexacroMethodArgumentResolver" class="com.nexacro.spring.resolve.NexacroMethodArgumentResolver">
-        <!-- only used annotation -->
         <!-- 
         <property name="convertListeners">
             <list>

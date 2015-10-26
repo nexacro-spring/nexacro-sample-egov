@@ -17,25 +17,13 @@ import com.nexacro.spring.dao.Dbms;
 import egovframework.rte.psl.orm.ibatis.SqlMapClientCallback;
 import egovframework.rte.psl.orm.ibatis.SqlMapClientTemplate;
 /**
- * <pre>
- * SqlMapClientTemplateDelegator 
- * queryForList 시 데이터 스키마 정보를 획득하기 위한 class
- * Spring의 connection management를 이용한다.
- * 
- * </pre>
+ * <p>SqlMapClientTemplate의 {@code queryForList(...)} 시 메타데이터 정보를 획득하기 위한 Delegator이다.
+ * <p>Spring의 Callback pattern을 이용하여 처리되며, Runtime시 SqlMapClientCallback interface가 정의된다.
  *
- * @ClassName   : SqlMapClientTemplateDelegator.java
- * @Description : 클래스 설명을 기술합니다.
  * @author Park SeongMin
- * @since 2015. 8. 6.
+ * @since 08.06.2015
  * @version 1.0
  * @see
- * @Modification Information
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 8. 6.     Park SeongMin     최초 생성
- * </pre>
  */
 @Deprecated
 public class SqlMapClientTemplateDelegator extends SqlMapClientTemplate {

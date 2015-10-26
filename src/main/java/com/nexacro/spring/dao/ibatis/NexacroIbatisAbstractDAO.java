@@ -17,6 +17,14 @@ import com.nexacro.spring.data.NexacroFirstRowHandler;
 import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 import egovframework.rte.psl.orm.ibatis.SqlMapClientTemplate;
 
+/**
+ * <p>nexacro platform 연동 시 추가적인 기능지원을 위한 EgovAbstractDAO를 확장한 클래스이다.
+ * 
+ * @author Park SeongMin
+ * @since 08.06.2015
+ * @version 1.0
+ * @see
+ */
 public class NexacroIbatisAbstractDAO extends EgovAbstractDAO {
 
 //	@Resource(name = "ibatisMetaDataProvider")
@@ -25,6 +33,13 @@ public class NexacroIbatisAbstractDAO extends EgovAbstractDAO {
 	@Resource(name = "dbmsProvider")
 	private DbmsProvider dbmsProvider;
 
+	/**
+	 * 입력받은 값을 batch로 데이터를 삽입한다.
+	 * @param queryId
+	 * @param batchArgs
+	 * @return batch count
+	 * @throws SQLException
+	 */
 	public int batch(String queryId, List batchArgs) throws SQLException {
 		SqlMapClient sqlMapClient = getSqlMapClient();
 		sqlMapClient.startBatch();
