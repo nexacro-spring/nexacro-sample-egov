@@ -17,22 +17,12 @@ import com.nexacro.spring.annotation.ParamDataSet;
 import com.nexacro.spring.data.NexacroResult;
 
 /**
- * <pre>
- * Code 처리를 위한 Controller
- * </pre>
+ * Test를 위한 Controller Sample Class
  *
- * @ClassName   : CodeController.java
- * @Description : Sample Controller Class
  * @author Park SeongMin
- * @since 2015. 9. 11.
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 9. 11.     Park SeongMin     최초 생성
- * </pre>
  */
 @Controller
 public class CodeController  {

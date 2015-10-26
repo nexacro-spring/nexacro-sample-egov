@@ -3,24 +3,12 @@ package nexacro.sample.vo;
 import java.util.Date;
 
 /**
- * <pre>
- * Statements
- * </pre>
  *
- * @ClassName   : CodeVO.java
- * @Description : 클래스 설명을 기술합니다.
  * @author Park SeongMin
- * @since 2015. 9. 11.
+ * @since 09.11.2015
  * @version 1.0
  * @see
- * @Modification Information
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 9. 11.     Park SeongMin     최초 생성
- * </pre>
  */
-
 public class CodeVO extends DefaultVO {
     
     private String codeCd;

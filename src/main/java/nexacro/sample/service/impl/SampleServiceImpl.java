@@ -17,23 +17,12 @@ import com.nexacro.xapi.data.DataSet;
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
 /**
- * <pre>
  * Test를 위한 ServiceImpl Sample Class
- * </pre>
- * 
- * @ClassName   : SampleServiceImpl.java
- * @Description : service impl
- * @author djkim
- * @since 2012. 1. 31.
+ *
+ * @author Park SeongMin
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * 
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2012. 1. 31.     djkim     최초 생성
- * </pre>
  */
 @Service("sampleService")
 public class SampleServiceImpl extends EgovAbstractServiceImpl implements SampleService {

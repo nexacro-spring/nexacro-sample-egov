@@ -1,25 +1,13 @@
 package nexacro.sample.vo;
 
 /**
- * <pre>
  * PersonVO Class
- * </pre>
  * 
- * @ClassName   : PersonVO.java
- * @Description : Person VO Class.
- * @author djkim
- * @since 2012. 1. 31.
+ * @author Park SeongMin
+ * @since 09.11.2015
  * @version 1.0
  * @see
- * @Modification Information
- * 
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2012. 1. 31.     djkim     최초 생성
- * </pre>
  */
-
 public class PersonVO {
     /**
      * Person 이름

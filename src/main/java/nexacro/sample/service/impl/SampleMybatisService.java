@@ -13,6 +13,14 @@ import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
+/**
+ * Test를 위한 ServiceImpl Sample Class
+ *
+ * @author Park SeongMin
+ * @since 08.12.2015
+ * @version 1.0
+ * @see
+ */
 @Service("sampleMybatisService")
 public class SampleMybatisService extends EgovAbstractServiceImpl implements SampleService {
 

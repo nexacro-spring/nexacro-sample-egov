@@ -16,22 +16,12 @@ import com.nexacro.spring.dao.jdbc.JdbcRowHandler;
 import com.nexacro.spring.data.NexacroFirstRowHandler;
 
 /**
- * <pre>
  * Test를 위한 DAO Sample Class
- * </pre>
  *
- * @ClassName   : LargeDataJdbcDAO.java
- * @Description : Sample DAO Class
  * @author Park SeongMin
- * @since 2015. 8. 18.
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 8. 18.     Park SeongMin     최초 생성
- * </pre>
  */
 @Repository("largeDataJdbcDAO")
 public class LargeDataJdbcDAO extends JdbcDaoSupport {

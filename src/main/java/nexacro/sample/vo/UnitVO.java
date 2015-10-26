@@ -4,25 +4,12 @@ import com.nexacro.spring.data.DataSetRowTypeAccessor;
 import com.nexacro.spring.data.DataSetSavedDataAccessor;
 
 /**
- * <pre>
- * Statements
- * </pre>
  * 
- * @ClassName : UnitVO.java
- * @Description : 클래스 설명을 기술합니다.
  * @author Park SeongMin
- * @since 2015. 7. 16.
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * 
- *               <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 7. 16.     Park SeongMin     최초 생성
- * </pre>
  */
-
 public class UnitVO implements DataSetRowTypeAccessor, DataSetSavedDataAccessor<UnitVO>{
 
     private String id;

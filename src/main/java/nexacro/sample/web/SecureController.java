@@ -21,19 +21,10 @@ import com.nexacro.xapi.data.PlatformData;
  * Test를 위한 Controller Sample Class
  * </pre>
  * 
- * @ClassName   : SecureController.java
- * @Description : Secure Controller Class
- * @author djkim
- * @since 2012. 1. 31.
+ * @author Park SeongMin
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * 
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2012. 1. 31.     djkim     최초 생성
- * </pre>
  */
 @Controller
 public class SecureController {

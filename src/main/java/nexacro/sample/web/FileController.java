@@ -29,23 +29,12 @@ import com.nexacro.xapi.data.datatype.PlatformDataType;
 import com.nexacro.xapi.tx.PlatformType;
 
 /**
- * <pre>
  * Test를 위한 Controller Sample Class
- * </pre>
- * 
- * @ClassName : FileController.java
- * @Description : Sample Controller Class
+ *
  * @author Park SeongMin
- * @since 2015. 8. 18.
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * 
- *               <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 8. 18.     Park SeongMin     최초 생성
- * </pre>
  */
 @Controller
 public class FileController {

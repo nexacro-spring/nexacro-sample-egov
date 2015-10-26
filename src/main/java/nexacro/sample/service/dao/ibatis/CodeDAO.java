@@ -10,22 +10,12 @@ import org.springframework.stereotype.Repository;
 import com.nexacro.spring.dao.ibatis.NexacroIbatisAbstractDAO;
 
 /**
- * <pre>
  * Test를 위한 DAO Sample Class
- * </pre>
  *
- * @ClassName   : CodeDAO.java
- * @Description : Sample DAO Class
  * @author Park SeongMin
- * @since 2015. 9. 11.
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2015. 9. 11.     Park SeongMin     최초 생성
- * </pre>
  */
 @Repository("codeDAO")
 public class CodeDAO extends NexacroIbatisAbstractDAO {

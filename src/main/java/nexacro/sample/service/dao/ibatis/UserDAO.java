@@ -9,23 +9,12 @@ import org.springframework.stereotype.Repository;
 import com.nexacro.spring.dao.ibatis.NexacroIbatisAbstractDAO;
 
 /**
- * <pre>
  * Test를 위한 DAO Sample Class
- * </pre>
- * 
- * @ClassName   : SampleDAO.java
- * @Description : Sample DAO Class
- * @author djkim
- * @since 2012. 1. 31.
+ *
+ * @author Park SeongMin
+ * @since 08.12.2015
  * @version 1.0
  * @see
- * @Modification Information
- * 
- * <pre>
- *     since          author              description
- *  ===========    =============    ===========================
- *  2012. 1. 31.     djkim     최초 생성
- * </pre>
  */
 @Repository("userDAO")
 public class UserDAO extends NexacroIbatisAbstractDAO {
