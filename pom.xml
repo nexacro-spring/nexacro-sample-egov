@@ -177,24 +177,21 @@
             <scope>test</scope>
         </dependency>
 
+		<!-- http://hibernate.org/validator/faq/ -->
+		<!-- 
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.0.0.GA</version>
 		</dependency>
-		
+		 -->
+		 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>4.0.0.GA</version>
+			<version>4.3.2.Final</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
-        
     </dependencies>
     
 </project>

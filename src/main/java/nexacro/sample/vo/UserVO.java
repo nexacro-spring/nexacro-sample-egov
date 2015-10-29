@@ -26,7 +26,8 @@ public class UserVO extends DefaultVO {
 	@Size(min = 4, max = 50, message = "Please, Enter your password at least 4 Characters.")
 	private String password;
 
-	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "Please, Verify your e-mail address.")
+//	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "Please, Verify your e-mail address.")
+	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "{errors.email}") // message source
     private String email;
 	
 	private String enName;
