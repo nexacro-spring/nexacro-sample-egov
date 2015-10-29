@@ -4,9 +4,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import org.apache.logging.log4j.core.config.plugins.validation.constraints.Required;
-
-
 /**
  * 
  * @author Park SeongMin
@@ -17,17 +14,14 @@ import org.apache.logging.log4j.core.config.plugins.validation.constraints.Requi
 public class UserVO extends DefaultVO {
 
     // Fields
-	@Required
 	@NotNull
 	@Size(min = 4, max = 20, message = "Please, Enter your id at least 4 Characters.")
     private String userId;
 	
-	@Required
 	@NotNull
 	@Size(max = 20, message = "Please, Enter your name.")
 	private String userName;
 	
-	@Required
 	@NotNull
 	@Size(min = 4, max = 50, message = "Please, Enter your password at least 4 Characters.")
 	private String password;
