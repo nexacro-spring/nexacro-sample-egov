@@ -40,7 +40,7 @@ public class CodeController  {
      * @return
      */
     @RequestMapping(value = "/selectCodeGroupList.do")
-    public NexacroResult selectCodeGroupList(@ParamDataSet(name="ds_search") List<GroupCodeVO> searchVOList){
+    public NexacroResult selectCodeGroupList(@ParamDataSet(name="ds_search", required=false) List<GroupCodeVO> searchVOList){
         
         GroupCodeVO searchVo = null;
         if(searchVOList != null && searchVOList.size() > 0) {

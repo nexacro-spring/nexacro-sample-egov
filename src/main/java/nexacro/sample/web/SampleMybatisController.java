@@ -34,7 +34,7 @@ public class SampleMybatisController {
     
     @RequestMapping(value = "/sampleMybatisSelectVO.do")
     public NexacroResult selectMybatisVo(
-                            @ParamDataSet(name="ds_search") List<SampleVO> searchVOList
+                            @ParamDataSet(name="ds_search", required=false) List<SampleVO> searchVOList
                             , PlatformData platformData){
         
         SampleVO searchVo = null;

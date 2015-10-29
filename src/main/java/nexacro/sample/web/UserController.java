@@ -55,18 +55,13 @@ public class UserController {
     
     @RequestMapping(value = "/userSelectVO.do")
 	public NexacroResult selectVo(
-			@ParamDataSet(name = "ds_search") List<UserVO> searchVOList,
-			@ParamDataSet(name = "__DS_PARAM_INFO__") List<Map> defaultList, 
+			@ParamDataSet(name = "ds_search", required=false) List<UserVO> searchVOList,
 			PlatformData platformData) {
         
         if (log.isDebugEnabled()) {
             System.out.println("UserController.selectVo()");
             log.debug("UserController.selectVo(). data="+new Debugger().detail(platformData));
         }
-        
-        NexacroContext nexacroContext = NexacroContextHolder.getNexacroContext();
-        PlatformData platformData2 = nexacroContext.getPlatformData();
-        
         
         UserVO searchVo = null;
         if(searchVOList != null && searchVOList.size() > 0) {

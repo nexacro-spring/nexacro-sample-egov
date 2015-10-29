@@ -47,8 +47,7 @@ public class SampleController {
     
     @RequestMapping(value = "/sampleSelectVO.do")
     public NexacroResult selectVo(
-                            @ParamDataSet(name="ds_search") List<SampleVO> searchVOList
-                            , @ParamDataSet(name="__DS_PARAM_INFO__") List<Map> defaultList
+                            @ParamDataSet(name="ds_search", required=false) List<SampleVO> searchVOList
                             , PlatformData platformData){
         
         if (log.isDebugEnabled()) {
@@ -71,8 +70,7 @@ public class SampleController {
     
     @RequestMapping(value = "/sampleSelectVOFromMap.do")
     public NexacroResult selectVoFromMap(
-    		@ParamDataSet(name="ds_search") List<SampleVO> searchVOList
-    		, @ParamDataSet(name="__DS_PARAM_INFO__") List<Map> defaultList
+    		@ParamDataSet(name="ds_search", required=false) List<SampleVO> searchVOList
     		, PlatformData platformData){
     	
     	if (log.isDebugEnabled()) {
