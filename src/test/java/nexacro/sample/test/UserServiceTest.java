@@ -1,8 +1,5 @@
 package nexacro.sample.test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +8,7 @@ import javax.annotation.Resource;
 import nexacro.sample.service.UserService;
 import nexacro.sample.vo.UserVO;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -56,9 +54,9 @@ public class UserServiceTest {
 		List<UserVO> userList = userService.selectUserVOList(searchVo);
 
 		if (userList.size() == 1 && "홍길동".equals(userList.get(0).getUserName())) {
-			assertTrue(true);
+			Assert.assertTrue(true);
 		} else {
-			assertTrue(false);
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -69,7 +67,7 @@ public class UserServiceTest {
 		userVO.setUserId("test1");
 		userVO.setPassword("test1");
 		userVO.setEmail("test1@tobesoft.com");
-		assertTrue(validate(userVO));
+		Assert.assertTrue(validate(userVO));
 	}
 
 	@Test
@@ -79,25 +77,25 @@ public class UserServiceTest {
 		userVO.setUserId("test1");
 		userVO.setPassword("test1");
 		userVO.setEmail("test1@tobesoft.com");
-		assertFalse(validate(userVO));
+		Assert.assertFalse(validate(userVO));
 
 		userVO.setUserName("test1");
 		userVO.setUserId("te"); // 아이디 네 글자 미만
 		userVO.setPassword("test1");
 		userVO.setEmail("test1@tobesoft.com");
-		assertFalse(validate(userVO));
+		Assert.assertFalse(validate(userVO));
 
 		userVO.setUserName("test1");
 		userVO.setUserId("test1");
 		userVO.setPassword("te"); // 패스워드 네 글자 미만
 		userVO.setEmail("test1@tobesoft.com");
-		assertFalse(validate(userVO));
+		Assert.assertFalse(validate(userVO));
 
 		userVO.setUserName("test1");
 		userVO.setUserId("test1");
 		userVO.setPassword("te");
 		userVO.setEmail("test1tobesoft.com"); // 이메일 유효성 검사 실패
-		assertFalse(validate(userVO));
+		Assert.assertFalse(validate(userVO));
 	}
 
 	/**
