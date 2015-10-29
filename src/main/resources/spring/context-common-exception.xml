@@ -7,20 +7,57 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
-	<bean id="exceptionTracer" class="com.nexacro.spring.interceptor.ExceptionTracer" />
-
-    <!-- 모든 aop 선언적 요소들은 <aop:config /> 요소 안에서 사용  -->
     <aop:config>
-        <!-- Jointpoint의 묶음으로서 Advice는 pointcut 단위로 적용 -->
-        <aop:pointcut id="serviceMethod"
-            expression="execution(* nexacro..service.impl.*Impl.*(..))" />
-        <!-- 하나의 Concern에 대한 모듈화 된 묶음 -->
-        <aop:aspect ref="exceptionTracer">
-            <!-- 메소드가 예외 발생시 적용될 advice 정의 -->
-            <aop:after-throwing throwing="exception"
-                pointcut-ref="serviceMethod" method="trace" />
-        </aop:aspect>
-    </aop:config>
+		<aop:pointcut id="serviceMethod" expression="execution(* nexacro..service.impl.*Impl.*(..))" />
+
+		<aop:aspect ref="exceptionTransfer">
+			<aop:after-throwing throwing="exception" pointcut-ref="serviceMethod" method="transfer" />
+		</aop:aspect>
+	</aop:config>
+	
+	<bean id="exceptionTransfer" class="egovframework.rte.fdl.cmmn.aspect.ExceptionTransfer">
+		<property name="exceptionHandlerService">
+			<list>
+				<ref bean="defaultExceptionHandleManager" />
+				<ref bean="otherExceptionHandleManager" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="defaultExceptionHandleManager" class="egovframework.rte.fdl.cmmn.exception.manager.DefaultExceptionHandleManager">
+		<property name="reqExpMatcher">
+			<ref bean="antPathMater"/>
+		</property>
+		<property name="patterns">
+			<list>
+				<value>**service.impl.*</value>
+			</list>
+		</property>
+		<property name="handlers">
+			<list>
+				<ref bean="egovHandler" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="otherExceptionHandleManager" class="egovframework.rte.fdl.cmmn.exception.manager.DefaultExceptionHandleManager">
+		<property name="reqExpMatcher">
+			<ref bean="antPathMater"/>
+		</property>
+		<property name="patterns">
+			<list>
+				<value>**service.impl.*</value>
+			</list>
+		</property>
+		<property name="handlers">
+			<list>
+				<ref bean="otherHandler" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="egovHandler" class="nexacro.sample.EgovSampleExcepHndlr" />
+	<bean id="otherHandler" class="nexacro.sample.EgovSampleOthersExcepHndlr" />	
 
 
 </beans>
