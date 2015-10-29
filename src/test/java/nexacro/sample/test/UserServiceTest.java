@@ -61,7 +61,7 @@ public class UserServiceTest {
 	}
 
 	@Test
-	public void testValidatingModifyUserVO() {
+	public void testUserVO() {
 		UserVO userVO = new UserVO(); // 성공
 		userVO.setUserName("test1");
 		userVO.setUserId("test1");
@@ -71,7 +71,7 @@ public class UserServiceTest {
 	}
 
 	@Test
-	public void testModifyUserVOWithWrongValues() {
+	public void testUserVOWithWrongValues() {
 		UserVO userVO = new UserVO();
 		userVO.setUserName("testtesttesttesttestttt"); // 이름 20자 초과
 		userVO.setUserId("test1");
