@@ -9,7 +9,7 @@ import java.util.Date;
  * @version 1.0
  * @see
  */
-public class SampleVO extends DefaultVO {
+public class SampleVO extends PageableVO {
 
     // Fields
     private String title;

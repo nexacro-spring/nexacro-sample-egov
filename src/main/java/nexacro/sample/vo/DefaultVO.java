@@ -18,14 +18,14 @@ package nexacro.sample.vo;
 import com.nexacro.spring.data.DataSetRowTypeAccessor;
 
 /**
- * @author 개발프레임웍크 실행환경 개발팀
- * @since 2009. 03.16
+ * default vo Class
+ * 
+ * @author Park SeongMin
+ * @since 09.11.2015
  * @version 1.0
- * @see Copyright (C) by MOPAS All right reserved.
+ * @see
  */
 public class DefaultVO implements DataSetRowTypeAccessor {
-
-    private static final long serialVersionUID = 1L;
 
     /** 검색조건 */
     private String searchCondition = "";
@@ -35,24 +35,6 @@ public class DefaultVO implements DataSetRowTypeAccessor {
 
     /** 검색사용여부 */
     private String searchUseYn = "";
-
-    /** 현재페이지 */
-    private int pageIndex = 1;
-
-    /** 페이지갯수 */
-    private int pageUnit = 10;
-
-    /** 페이지사이즈 */
-    private int pageSize = 10;
-
-    /** firstIndex */
-    private int firstIndex = 1;
-
-    /** lastIndex */
-    private int lastIndex = 1;
-
-    /** recordCountPerPage */
-    private int recordCountPerPage = 10;
 
     private int rowType;
 
@@ -99,96 +81,6 @@ public class DefaultVO implements DataSetRowTypeAccessor {
      */
     public void setSearchUseYn(String searchUseYn) {
         this.searchUseYn = searchUseYn;
-    }
-
-    /**
-     * @return the pageIndex
-     */
-    public int getPageIndex() {
-        return pageIndex;
-    }
-
-    /**
-     * @param pageIndex
-     *            the pageIndex to set
-     */
-    public void setPageIndex(int pageIndex) {
-        this.pageIndex = pageIndex;
-    }
-
-    /**
-     * @return the pageUnit
-     */
-    public int getPageUnit() {
-        return pageUnit;
-    }
-
-    /**
-     * @param pageUnit
-     *            the pageUnit to set
-     */
-    public void setPageUnit(int pageUnit) {
-        this.pageUnit = pageUnit;
-    }
-
-    /**
-     * @return the pageSize
-     */
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * @param pageSize
-     *            the pageSize to set
-     */
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    /**
-     * @return the firstIndex
-     */
-    public int getFirstIndex() {
-        return firstIndex;
-    }
-
-    /**
-     * @param firstIndex
-     *            the firstIndex to set
-     */
-    public void setFirstIndex(int firstIndex) {
-        this.firstIndex = firstIndex;
-    }
-
-    /**
-     * @return the lastIndex
-     */
-    public int getLastIndex() {
-        return lastIndex;
-    }
-
-    /**
-     * @param lastIndex
-     *            the lastIndex to set
-     */
-    public void setLastIndex(int lastIndex) {
-        this.lastIndex = lastIndex;
-    }
-
-    /**
-     * @return the recordCountPerPage
-     */
-    public int getRecordCountPerPage() {
-        return recordCountPerPage;
-    }
-
-    /**
-     * @param recordCountPerPage
-     *            the recordCountPerPage to set
-     */
-    public void setRecordCountPerPage(int recordCountPerPage) {
-        this.recordCountPerPage = recordCountPerPage;
     }
 
     @Override

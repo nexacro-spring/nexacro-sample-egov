@@ -42,4 +42,14 @@ public class SampleMybatisService extends EgovAbstractServiceImpl implements Sam
 
 	}
 
+	@Override
+	public List<SampleVO> selectSamplePaging(SampleVO searchVO) {
+		return null;
+	}
+
+	@Override
+	public int selectSampleCount(SampleVO searchVO) {
+		return 0;
+	}
+
 }

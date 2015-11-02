@@ -69,6 +69,48 @@
             
     </select>
     
+    <select id="sampleDAO.selectSampleCount" parameterClass="sampleVO" resultClass="int">
+            SELECT
+                COUNT(*) as totalCount
+            FROM TB_BOARD A
+            WHERE 1=1
+            <dynamic>
+                <isNotNull property="searchKeyword">
+                    <isEqual prepend=" AND " property="searchCondition" compareValue="TITLE">
+                        TITLE LIKE '%' || #searchKeyword# || '%'
+                    </isEqual>
+                    <isEqual prepend=" AND " property="searchCondition" compareValue="CONTENTS">
+                        CONTENTS LIKE '%' || #searchKeyword# || '%' 
+                    </isEqual>
+                </isNotNull>
+            </dynamic>
+    </select>
+    
+	<select id="sampleDAO.selectSamplePaging" parameterClass="sampleVO" resultMap="sample">
+            SELECT
+                A.TITLE AS TITLE, 
+                A.REG_ID AS REG_ID, 
+                A.REG_DATE AS REG_DATE, 
+                A.POST_ID AS POST_ID, 
+                A.CONTENTS AS CONTENTS, 
+                A.COMMUNITY_ID AS COMMUNITY_ID,
+                A.HIT_COUNT AS HIT_COUNT
+            FROM TB_BOARD A
+            WHERE 1=1
+            <dynamic>
+                <isNotNull property="searchKeyword">
+                    <isEqual prepend=" AND " property="searchCondition" compareValue="TITLE">
+                        TITLE LIKE '%' || #searchKeyword# || '%'
+                    </isEqual>
+                    <isEqual prepend=" AND " property="searchCondition" compareValue="CONTENTS">
+                        CONTENTS LIKE '%' || #searchKeyword# || '%' 
+                    </isEqual>
+                </isNotNull>
+            </dynamic>
+            ORDER BY A.REG_ID DESC 
+            LIMIT #recordCountPerPage# OFFSET #firstIndex#
+    </select>
+    
     <insert id="sampleDAO.insertSampleVO" parameterClass="sampleVO">
         <![CDATA[
             INSERT INTO TB_BOARD (

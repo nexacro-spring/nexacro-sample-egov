@@ -73,12 +73,31 @@
         <Col id="MENU_DESC">II</Col>
       </Row>
       <Row>
+        <Col id="MENU_NAME">Multi Paging</Col>
+        <Col id="MENU_SEQ">1</Col>
+        <Col id="MENU_OPTP">MAIN</Col>
+        <Col id="PAGE_URL">sample::Pattern_09.xfdl</Col>
+        <Col id="MENU_TOP">1000</Col>
+        <Col id="MENU_ID">1003</Col>
+        <Col id="MENU_GRP">1000</Col>
+        <Col id="CREATE_DT">20120831000000000</Col>
+        <Col id="MENU_LEVEL">1</Col>
+        <Col id="PAGE_ID">userMgmt.xfdl</Col>
+        <Col id="PAGE_NAME">사용자 그룹관리</Col>
+        <Col id="MENU_ARGS">admin</Col>
+        <Col id="MENU_STAT">VIEW</Col>
+        <Col id="CREATE_USER">test</Col>
+        <Col id="UPDATE_DT">20120905000000000</Col>
+        <Col id="UPDATE_USER">test</Col>
+        <Col id="MENU_DESC">II</Col>
+      </Row>
+      <Row>
         <Col id="MENU_NAME">Master Detail</Col>
         <Col id="MENU_SEQ">1</Col>
         <Col id="MENU_OPTP">MAIN</Col>
         <Col id="PAGE_URL">sample::Pattern_08.xfdl</Col>
         <Col id="MENU_TOP">1000</Col>
-        <Col id="MENU_ID">1003</Col>
+        <Col id="MENU_ID">1004</Col>
         <Col id="MENU_GRP">1000</Col>
         <Col id="CREATE_DT">20120831000000000</Col>
         <Col id="MENU_LEVEL">1</Col>
@@ -97,7 +116,7 @@
         <Col id="MENU_OPTP">MAIN</Col>
         <Col id="PAGE_URL">sample::Pattern_05.xfdl</Col>
         <Col id="MENU_TOP">1000</Col>
-        <Col id="MENU_ID">1004</Col>
+        <Col id="MENU_ID">1005</Col>
         <Col id="MENU_GRP">1000</Col>
         <Col id="CREATE_DT">20120831000000000</Col>
         <Col id="MENU_LEVEL">1</Col>
@@ -116,7 +135,7 @@
         <Col id="MENU_OPTP">MAIN</Col>
         <Col id="PAGE_URL">sample::Pattern_06.xfdl</Col>
         <Col id="MENU_TOP">1000</Col>
-        <Col id="MENU_ID">1005</Col>
+        <Col id="MENU_ID">1006</Col>
         <Col id="MENU_GRP">1000</Col>
         <Col id="CREATE_DT">20120831000000000</Col>
         <Col id="MENU_LEVEL">1</Col>
@@ -135,7 +154,7 @@
         <Col id="MENU_OPTP">MAIN</Col>
         <Col id="PAGE_URL">sample::Pattern_04.xfdl</Col>
         <Col id="MENU_TOP">1000</Col>
-        <Col id="MENU_ID">1006</Col>
+        <Col id="MENU_ID">1007</Col>
         <Col id="MENU_GRP">1000</Col>
         <Col id="CREATE_DT">20120831000000000</Col>
         <Col id="MENU_LEVEL">1</Col>
@@ -154,7 +173,7 @@
         <Col id="MENU_OPTP">MAIN</Col>
         <Col id="PAGE_URL">sample::Pattern_07.xfdl</Col>
         <Col id="MENU_TOP">1000</Col>
-        <Col id="MENU_ID">1007</Col>
+        <Col id="MENU_ID">1008</Col>
         <Col id="MENU_GRP">1000</Col>
         <Col id="CREATE_DT">20120831000000000</Col>
         <Col id="MENU_LEVEL">1</Col>

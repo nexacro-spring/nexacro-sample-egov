@@ -66,7 +66,17 @@ public class SampleServiceImpl extends EgovAbstractServiceImpl implements Sample
 	public List<Map> selectSampleMapList(SampleVO searchVO) {
     	return sampleDAO.selectSampleMapList(searchVO);
 	}
+    
+    @Override
+    public List<SampleVO> selectSamplePaging(SampleVO searchVO) {
+    	return sampleDAO.selectSamplePaging(searchVO);
+    }
 
+	@Override
+	public int selectSampleCount(SampleVO searchVO) {
+		return sampleDAO.selectSampleCount(searchVO);
+	}
+    
     public void insertSampleVO(SampleVO sample) {
         sampleDAO.insertSampleVO(sample);
     }

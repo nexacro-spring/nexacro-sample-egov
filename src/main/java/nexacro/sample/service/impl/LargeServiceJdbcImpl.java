@@ -20,26 +20,21 @@ import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
  * @version 1.0
  * @see
  */
-@Service("largeDataService")
-public class LargeServiceImpl extends EgovAbstractServiceImpl implements LargeDataService {
+@Service("largeDataJdbcService")
+public class LargeServiceJdbcImpl extends EgovAbstractServiceImpl implements LargeDataService {
 
-    @Resource(name = "largeDataDAO")
-    private LargeDataDAO largeDataDAO;
-    
     @Resource(name = "largeDataJdbcDAO")
     private LargeDataJdbcDAO largeDataJdbcDAO;
     
     private static boolean isInited = false;
     
-    @Override
     public void selectLargeData(NexacroFirstRowHandler firstRowHandler, String sendDataSetName, int firstRowCount, int initDataCount) {
         
         if(!isInited) {
-//            largeDataDAO.initData(initDataCount);
             largeDataJdbcDAO.initData(initDataCount);
         }
         isInited = true;
-        largeDataDAO.selectLargeData(firstRowHandler, sendDataSetName, firstRowCount);
+        largeDataJdbcDAO.selectLargeData(firstRowHandler, sendDataSetName, firstRowCount);
         
     }
 

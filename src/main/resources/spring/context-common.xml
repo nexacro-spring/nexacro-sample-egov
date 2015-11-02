@@ -18,6 +18,7 @@
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
+				<!-- 메시지 properties 파일을 등록한다. 등록 하지 않은 경우의 기본값은 message.properties 이다.-->
 				<value>classpath:/message/message-common</value>
 				<value>classpath:/message/message-user</value>
 			</list>

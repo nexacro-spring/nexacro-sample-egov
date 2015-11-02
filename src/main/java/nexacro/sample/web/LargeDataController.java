@@ -27,16 +27,20 @@ public class LargeDataController {
 
 	private static final Logger log = LoggerFactory.getLogger(LargeDataController.class);
 	
-    // @Autowired(required = false) // Type 정의
     @Resource(name = "largeDataService")
-    // Name 정의
     private LargeDataService largeDataService;
+    
+    @Resource(name = "largeDataJdbcService")
+    private LargeDataService largeDataJdbcService;
+    
+    @Resource(name = "largeDataMybatisService")
+    private LargeDataService largeDataMybatisService;
     
     private static int DATA_CNT = 100000;
     
     @RequestMapping(value = "/sampleLargeData.do")
     public NexacroResult largeData(NexacroFirstRowHandler firstRowHandler
-                            , @ParamVariable(name="firstRowCount") int firstRowCount){
+                            , @ParamVariable(name="firstRowCount", required=false) int firstRowCount){
         
         
         if (log.isDebugEnabled()) {
@@ -68,7 +72,7 @@ browser
     
     @RequestMapping(value = "/sampleJdbcLargeData.do")
     public NexacroResult jdbcLargeData(NexacroFirstRowHandler firstRowHandler
-                            , @ParamVariable(name="firstRowCount") int firstRowCount){
+                            , @ParamVariable(name="firstRowCount", required=false) int firstRowCount){
         
         if (log.isDebugEnabled()) {
             log.debug("sampleJdbcLargeData.do().");
@@ -78,8 +82,25 @@ browser
         String sendDataSetName = "firstRowData";
         int initDataCount = DATA_CNT; // this is dummy data!!
         
+        largeDataJdbcService.selectLargeData(firstRowHandler, sendDataSetName, firstRowCount, initDataCount);
         
-        largeDataService.selectJdbcLargeData(firstRowHandler, sendDataSetName, firstRowCount, initDataCount);
+        NexacroResult result = new NexacroResult();
+        return result;
+    }
+    
+    @RequestMapping(value = "/sampleMybatisLargeData.do")
+    public NexacroResult mybatisLargeData(NexacroFirstRowHandler firstRowHandler
+                            , @ParamVariable(name="firstRowCount", required=false) int firstRowCount){
+        
+        if (log.isDebugEnabled()) {
+            log.debug("sampleMybatisLargeData.do().");
+        }
+        firstRowHandler.setContentType(PlatformType.CONTENT_TYPE_SSV);
+        
+        String sendDataSetName = "firstRowData";
+        int initDataCount = DATA_CNT; // this is dummy data!!
+        
+        largeDataMybatisService.selectLargeData(firstRowHandler, sendDataSetName, firstRowCount, initDataCount);
         
         NexacroResult result = new NexacroResult();
         return result;

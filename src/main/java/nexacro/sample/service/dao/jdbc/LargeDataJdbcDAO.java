@@ -38,6 +38,8 @@ public class LargeDataJdbcDAO extends JdbcDaoSupport {
     }
     
     public void initData(int initDataCount) {
+    	
+    	getJdbcTemplate().execute("DELETE FROM TB_LARGE");
         
         List<Object[]> batchArgs = new ArrayList<Object[]>();
         for(int i=0; i<initDataCount; i++) {

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Work" classname="Work" inheritanceid="" position="absolute" titletext="MultiDetail" left="0" width="800" top="0" height="400" onload="form_onload">
+    <Layouts>
+      <Layout>
+        <Grid id="grd_list" taborder="0" binddataset="ds_list" useinputpanel="false" cellsizingtype="col" nodatatext="데이타를 찾을 수 없습니다." left="0" top="89" right="0" bottom="0">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="164"/>
+                <Column size="250"/>
+                <Column size="250"/>
+                <Column size="69"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell style="background:#348ddf18;color:#1f5ca7ff;color2:#1f5ca7ff;" text="PostID"/>
+                <Cell col="1" style="background:#348ddf18;color:#1f5ca7ff;color2:#1f5ca7ff;backgroundimage: ;" text="Title"/>
+                <Cell col="2" style="background:#348ddf18;color:#1f5ca7ff;color2:#1f5ca7ff;" text="Contents"/>
+                <Cell col="3" style="background:#348ddf18;color:#1f5ca7ff;color2:#1f5ca7ff;" text="Count"/>
+              </Band>
+              <Band id="body">
+                <Cell celltype="body" edittype="none" style="cursor: ;" text="bind:postId"/>
+                <Cell col="1" celltype="none" edittype="normal" style="align:left;font:underline 10 arial;cursor:hand;" text="bind:title" maskchar=" " suppress="0"/>
+                <Cell col="2" celltype="none" edittype="normal" text="bind:contents"/>
+                <Cell col="3" edittype="normal" text="bind:hitCount"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_search" taborder="16" left="0" top="0" right="0" height="41" scrollbars="none" cssclass="div_WF_searchBg">
+          <Layouts>
+            <Layout>
+              <Static id="st_searchCondition" taborder="24" text="검색조건" cssclass="sta_WF_schTitle" left="20" top="0" width="64" height="41" domainId="nexa.s_condition"/>
+              <Button id="btn_search" taborder="27" cssclass="btn_WF_schArea" top="0" right="0" bottom="0" width="51" domainId="nexa.search" onclick="fn_search"/>
+              <Combo id="cmb_searchCondition" taborder="28" codecolumn="codecolumn" datacolumn="datacolumn" left="86" top="10" height="20" domainId="nexa.name;nexa.code" width="140">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">TITLE</Col>
+                      <Col id="datacolumn">제목</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">CONTENTS</Col>
+                      <Col id="datacolumn">내용</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Edit id="edt_searchKeyword" taborder="29" onkeyup="div_search_btn_search_onclick" left="227" top="10" height="20" width="261"/>
+              <Button id="btn_index00" taborder="30" text="2" left="24.31%" top="55" right="72.31%" height="25"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_grid_top" taborder="17" left="0" top="63" right="0" height="23" scrollbars="none">
+          <Layouts>
+            <Layout>
+              <Static id="sta_title" taborder="25" text="Records Found" cssclass="sta_WF_GridFound2" left="33" top="0" bottom="0" width="120"/>
+              <Static id="sta_total_cnt" taborder="26" text="0" cssclass="sta_WF_GridFound" left="8" top="0" bottom="0" width="20"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="btn_index" taborder="18" text="1" left="20.25%" top="55" right="76.25%" height="25" onclick="btn_index_onclick"/>
+        <Button id="btn_index00" taborder="19" text="2" left="24.25%" top="55" right="72.25%" height="25" onclick="btn_index_onclick"/>
+        <Button id="btn_index01" taborder="20" text="3" left="28.25%" top="55" right="68.25%" height="25" onclick="btn_index_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_search" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="searchCondition" type="STRING" size="100"/>
+          <Column id="searchKeyword" type="STRING" size="100"/>
+          <Column id="pageIndex" type="INT" size="256"/>
+          <Column id="pageUnit" type="INT" size="256"/>
+          <Column id="pageSize" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="searchKeyword"/>
+            <Col id="searchCondition"/>
+            <Col id="pageIndex">1</Col>
+            <Col id="pageUnit">10</Col>
+            <Col id="pageSize">10</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_list" firefirstcount="1000" firenextcount="1000" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="regId" type="STRING" size="256"/>
+          <Column id="postId" type="STRING" size="256"/>
+          <Column id="contents" type="STRING" size="256"/>
+          <Column id="communityId" type="STRING" size="256"/>
+          <Column id="regDate" type="DATE" size="256"/>
+          <Column id="hitCount" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_pagingInfo" firefirstcount="1000" firenextcount="1000" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="currentPageNo" type="INT" size="256"/>
+          <Column id="pageSize" type="INT" size="256"/>
+          <Column id="recordCountPerPage" type="INT" size="256"/>
+          <Column id="totalRecordCount" type="INT" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="div_search.cmb_searchCondition" propid="value" datasetid="ds_search" columnid="searchCondition"/>
+      <BindItem id="item1" compid="div_search.edt_searchKeyword" propid="value" datasetid="ds_search" columnid="searchKeyword"/>
+    </Bind>
+    <Script type="xscript5.0"><![CDATA[/***********************************************************************
+ * 01. 업무구분 : Multi Detail
+ * 02. 화면명   : Pattern_02.xfdl
+ * 03. 그룹설명 : 
+ * 04. 작성일   :
+ * 05. 작성자   :
+ * 06. 수정이력 :
+ ***********************************************************************
+ *     수정일     작성자   내용
+ ***********************************************************************
+ *
+ ***********************************************************************
+*/
+
+/***********************************************************************
+ * Script Include 
+ ************************************************************************/
+include "lib::comLib.xjs";
+
+/***********************************************************************
+ * 그룹 변수 선언부
+ ************************************************************************/
+ 
+this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	Ex.core.init(obj);
+    this.fn_search();
+} 
+ 
+/***********************************************************************************
+* Transaction Function
+***********************************************************************************/
+//조회
+this.fn_search = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	var sSvcID        	= "search";                    
+    var sController   	= "samplePaging.do"; //VO형태
+
+	var sInDatasets   	= "ds_search=ds_search";	
+	var sOutDatasets  	= "ds_list=dsList ds_pagingInfo=dsPagingInfo";
+    var sArgs="";
+    
+    
+    // 조회조건(Condition)
+	this.ds_search.setColumn(0, "searchCondition", this.div_search.cmb_searchCondition.value);
+	this.ds_search.setColumn(0, "searchKeyword", this.div_search.edt_searchKeyword.value);
+	
+	Ex.core.tran(this,sSvcID, sController, sInDatasets, sOutDatasets, sArgs,"","",true,2); //(0:XML타입), (1:Binary타입), (2:SSV 타입)
+}
+
+
+//검색  Enter키
+this.div_search_btn_search_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	if ( e.keycode == 13 )
+	{
+		this.fn_search();
+	}
+}
+
+
+/***********************************************************************************
+* CallBack Event (strSvcId - Sevice ID, nErrorCode - ErrorCode, strErrorMsg - Error Message)
+***********************************************************************************/
+/* callBack함수 */
+this.fn_callBack = function (strSvcId, nErrorCode, strErrorMsg)
+{ 
+	if (nErrorCode < 0) 
+	{
+		return Ex.core.comMsg("alert",strErrorMsg);		
+	}
+	
+	if (strSvcId == "search") 
+	{
+		this.fn_search_post();
+	}
+
+
+}
+
+
+/***********************************************************************************
+* User Function
+***********************************************************************************/
+//조회 후처리
+this.fn_search_post = function()
+{
+	//페이징 없는 경우
+	var nTotalCnt = this.ds_pagingInfo.getColumn(0, "totalRecordCount");
+
+	this.div_grid_top.sta_total_cnt.set_text(nTotalCnt);
+}
+
+this.btn_index_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	var pageIndex = obj.text;
+	this.ds_search.setColumn(0, "pageIndex", pageIndex);
+	this.fn_search();
+}
+]]></Script>
+  </Form>
+</FDL>

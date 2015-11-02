@@ -5,9 +5,11 @@ import javax.annotation.Resource;
 import nexacro.sample.service.LargeDataService;
 import nexacro.sample.service.dao.ibatis.LargeDataDAO;
 import nexacro.sample.service.dao.jdbc.LargeDataJdbcDAO;
+import nexacro.sample.service.dao.mybatis.LargeDataMybatisMapper;
 
 import org.springframework.stereotype.Service;
 
+import com.nexacro.spring.dao.mybatis.MybatisRowHandler;
 import com.nexacro.spring.data.NexacroFirstRowHandler;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
@@ -20,11 +22,11 @@ import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
  * @version 1.0
  * @see
  */
-@Service("largeDataService")
-public class LargeServiceImpl extends EgovAbstractServiceImpl implements LargeDataService {
+@Service("largeDataMybatisService")
+public class LargeServiceMybatis extends EgovAbstractServiceImpl implements LargeDataService {
 
-    @Resource(name = "largeDataDAO")
-    private LargeDataDAO largeDataDAO;
+    @Resource(name = "largeDataMybatisMapper")
+    private LargeDataMybatisMapper largeDataMybatisMapper;
     
     @Resource(name = "largeDataJdbcDAO")
     private LargeDataJdbcDAO largeDataJdbcDAO;
@@ -39,7 +41,10 @@ public class LargeServiceImpl extends EgovAbstractServiceImpl implements LargeDa
             largeDataJdbcDAO.initData(initDataCount);
         }
         isInited = true;
-        largeDataDAO.selectLargeData(firstRowHandler, sendDataSetName, firstRowCount);
+        
+        MybatisRowHandler rowHandler = new MybatisRowHandler(firstRowHandler, sendDataSetName, firstRowCount);
+    	largeDataMybatisMapper.selectLargeData(rowHandler);
+		rowHandler.sendRemainData();
         
     }
 

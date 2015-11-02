@@ -1,5 +1,6 @@
 package nexacro.sample.web;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +27,8 @@ import com.nexacro.xapi.data.Variable;
 import com.nexacro.xapi.data.VariableList;
 import com.nexacro.xapi.tx.HttpPlatformRequest;
 import com.nexacro.xapi.tx.HttpPlatformResponse;
+
+import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * Test를 위한 Controller Sample Class
@@ -104,6 +107,48 @@ public class SampleController {
         sampleService.modifyMultiSampleVO(modifyList);
         
         NexacroResult result = new NexacroResult();
+        
+        return result;
+    }
+    
+    
+    @RequestMapping(value = "/samplePaging.do")
+    public NexacroResult selectPaging(
+                            @ParamDataSet(name="ds_search", required=false) List<SampleVO> searchVOList
+                            ){
+    
+        SampleVO searchVO = null;
+        if(searchVOList != null && searchVOList.size() > 0) {
+            searchVO = searchVOList.get(0);
+        }
+        if(searchVO == null) {
+        	searchVO = new SampleVO();
+        }
+
+        searchVO.setPageUnit(10);
+        searchVO.setPageSize(10);
+
+        
+    	PaginationInfo paginationInfo = new PaginationInfo();
+    	paginationInfo.setCurrentPageNo(searchVO.getPageIndex());
+    	paginationInfo.setRecordCountPerPage(searchVO.getPageUnit());
+    	paginationInfo.setPageSize(searchVO.getPageSize());
+
+    	searchVO.setFirstIndex(paginationInfo.getFirstRecordIndex());
+    	searchVO.setLastIndex(paginationInfo.getLastRecordIndex());
+    	searchVO.setRecordCountPerPage(paginationInfo.getRecordCountPerPage());
+
+    	List<SampleVO> sampleList = sampleService.selectSamplePaging(searchVO);
+
+    	int totalCount = sampleService.selectSampleCount(searchVO);
+    	paginationInfo.setTotalRecordCount(totalCount);
+        
+    	List paginationInfos = new ArrayList();
+    	paginationInfos.add(paginationInfo);
+        
+        NexacroResult result = new NexacroResult();
+        result.addDataSet("dsList", sampleList);
+        result.addDataSet("dsPagingInfo", paginationInfos);
         
         return result;
     }

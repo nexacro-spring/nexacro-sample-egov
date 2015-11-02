@@ -26,15 +26,7 @@
     <bean id="nexacroInterceptor" class="com.nexacro.spring.servlet.NexacroInterceptor"/>
     
     <!-- nexacro method argument resolver -->
-    <bean id="nexacroMethodArgumentResolver" class="com.nexacro.spring.resolve.NexacroMethodArgumentResolver">
-        <!-- 
-        <property name="convertListeners">
-            <list>
-                <ref bean="nexacroListener" />
-            </list>
-        </property>
-        -->
-    </bean>
+    <bean id="nexacroMethodArgumentResolver" class="com.nexacro.spring.resolve.NexacroMethodArgumentResolver" />
     
     <!-- <bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0"/>  -->
     <bean id="nexacroView" class="com.nexacro.spring.view.NexacroView" >
@@ -55,7 +47,7 @@
     <bean id="exceptionResolver" class="com.nexacro.spring.resolve.NexacroMappingExceptionResolver" p:order="1">
         <property name="view" ref="nexacroView" />   
         <property name="shouldLogStackTrace" value="true" />   
-        <property name="shouldSendStackTrace" value="false" />
+        <property name="shouldSendStackTrace" value="true" />
         <!-- shouldSendStackTrace 가 false 일 경우 nexacro platform으로 전송되는 에러메시지  -->
         <!-- <property name="defaultErrorMsg" value="An Error Occured. check the ErrorCode for detail of error infomation" /> -->
         <property name="defaultErrorMsg" value="fail.common.msg" />

@@ -28,6 +28,14 @@ public class SampleDAO extends NexacroIbatisAbstractDAO {
     	return (List<Map>) list("sampleDAO.selectSampleMapList", searchVO);
     }
 
+    public List<SampleVO> selectSamplePaging(SampleVO searchVO) {
+    	return (List<SampleVO>) list("sampleDAO.selectSamplePaging", searchVO);
+    }
+    
+    public int selectSampleCount(SampleVO searchVO) {
+		return (int) select("sampleDAO.selectSampleCount", searchVO);
+	}
+    
     public void insertSampleVO(SampleVO sample) {
         insert("sampleDAO.insertSampleVO", sample);
     }

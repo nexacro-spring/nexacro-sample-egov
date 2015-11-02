@@ -19,7 +19,10 @@ public interface SampleService {
 
     List<Map> selectSampleMapList(SampleVO searchVO);
     
+    List<SampleVO> selectSamplePaging(SampleVO searchVO);
+    
+    int selectSampleCount(SampleVO searchVO);
+    
     void modifyMultiSampleVO(List<SampleVO> modifyList);
-
 
 }
