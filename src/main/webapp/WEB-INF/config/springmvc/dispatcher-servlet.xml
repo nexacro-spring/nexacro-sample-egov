@@ -55,9 +55,11 @@
     <bean id="exceptionResolver" class="com.nexacro.spring.resolve.NexacroMappingExceptionResolver" p:order="1">
         <property name="view" ref="nexacroView" />   
         <property name="shouldLogStackTrace" value="true" />   
-        <property name="shouldSendStackTrace" value="true" />
+        <property name="shouldSendStackTrace" value="false" />
         <!-- shouldSendStackTrace 가 false 일 경우 nexacro platform으로 전송되는 에러메시지  -->
-        <property name="defaultErrorMsg" value="An Error Occured. check the ErrorCode for detail of error infomation" />   
+        <!-- <property name="defaultErrorMsg" value="An Error Occured. check the ErrorCode for detail of error infomation" /> -->
+        <property name="defaultErrorMsg" value="fail.common.msg" />
+        <property name="messageSource" ref="messageSource" />   
     </bean>   
     
      <!-- XENI (nexacro) Request Mapping -->
