@@ -96,7 +96,7 @@
         </dependency>
  		<dependency>
             <groupId>com.nexacro.spring</groupId>
-            <artifactId>nexacro-orm</artifactId>
+            <artifactId>nexacro-dataaccess</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 

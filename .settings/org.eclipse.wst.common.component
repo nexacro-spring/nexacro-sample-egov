@@ -11,7 +11,7 @@
         <dependent-module archiveName="nexacro-excel-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/nexacro-excel/nexacro-excel">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="nexacro-orm-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/nexacro-orm/nexacro-orm">
+        <dependent-module archiveName="nexacro-dataaccess-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/nexacro-dataaccess/nexacro-dataaccess">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/nexacro-sample-egov/target/classes"/>
