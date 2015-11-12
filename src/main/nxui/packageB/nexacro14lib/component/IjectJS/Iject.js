@@ -9,7 +9,7 @@ if (!JsNamespace.exist("Iject"))
 	 * @namespace
 	 * @name Iject
 	 * @author
-	 * @memberof!  NxModule
+	 * @memberof!  Iject
 	 * @author  copyright 2015 TOBESOFT {J}
 	 */
 	JsNamespace.declare("Iject", {
@@ -100,7 +100,13 @@ if (!JsNamespace.exist("Iject"))
 			}
 		},
 
-
+		/**
+		 * seperate size 조정
+		 * @param  
+		 * @return
+		 * @example
+		 * @memberOf Iject
+		 */
 		setSeprateFrame : function()
 		{
 			Iject.$["vFrameSet"].set_separatesize(Iject.$["framesize"]);
