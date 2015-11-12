@@ -179,14 +179,11 @@ this.Button02_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
                }; 
   Iject.open(this,"StringReturnSample","sample::Pattern_10p.xfdl",args);
 
-//application.open("modeless", url, cf, {a:'aaa', b:'bbb'}, "showtitlebar=true showstatusbar=false", 0, 0,400,400);  //Iject.windowOpen(this,"sample::sample008_pop.xfdl",args);
-  //Ex.core.popup(this,"StringReturnSample","sample::sample008_pop.xfdl",args,"modaless=true");
 }
 
 this.Button01_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
 {
-	  //trace(" getOwnerFrame(); : "  + ;
-	 // trace(">>> " + Eco.isEmpty(this.getOwnerFrame().all["StringReturnSample"]));
+
 	  var args ={arg1:'1111111111111111111',
                   arg2:'2222222222222222222222222'         
                }; 

@@ -468,8 +468,8 @@ this.div_grid_top_btn_add_onclick = function(obj:Button,  e:nexacro.ClickEventIn
 {
 	var nRow = this.ds_codeGroupList.addRow();
 	//행 추가시 등록일, 수정일 오늘 날짜 표시
-	this.ds_codeGroupList.setColumn(nRow, "createDt", Ex.util.todayTime());
-	this.ds_codeGroupList.setColumn(nRow, "updateDt", Ex.util.todayTime());
+	this.ds_codeGroupList.setColumn(nRow, "createDt", Iject.util.todayTime());
+	this.ds_codeGroupList.setColumn(nRow, "updateDt", Iject.util.todayTime());
 	//행 추가시 등록자, 수정자 표시
 	this.ds_codeGroupList.setColumn(nRow, "createUser", "test");
 	this.ds_codeGroupList.setColumn(nRow, "updateUser", "test");
@@ -502,7 +502,7 @@ this.div_grid_top_btn_save_onclick = function(obj:Button,  e:nexacro.ClickEventI
  */ 
 this.div_bottom_btn_save_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
 {    
-    if(Ex.core.comMsg("confirm","Do you want to save?"))
+    if(Iject.alert("confirm","Do you want to save?"))
     {
 	    this.fn_save("modifyCode");
 	}
@@ -538,8 +538,8 @@ this.btn_insertCode_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
 	nGroup_cd = this.ds_codeGroupList.getColumn(nGroupVal, "groupCd");
 	this.ds_codeList.setColumn(nRow,"groupCd",nGroup_cd);
 	
-	this.ds_codeList.setColumn(nRow,"createDt",Ex.util.todayTime());
-	this.ds_codeList.setColumn(nRow, "updateDt", Ex.util.todayTime());
+	this.ds_codeList.setColumn(nRow,"createDt",Iject.util.todayTime());
+	this.ds_codeList.setColumn(nRow, "updateDt", Iject.util.todayTime());
 	this.ds_codeList.setColumn(nRow, "createUser", "test");
 	this.ds_codeList.setColumn(nRow, "updateUser", "test");
 }
