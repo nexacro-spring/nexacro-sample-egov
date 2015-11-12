@@ -128,7 +128,7 @@ this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
 {
 	//기본 공통  함수 초기화
 	Iject.formOnload(obj);	
-    this.fn_search();
+    //this.fn_search();
    
 } 
 
@@ -146,14 +146,14 @@ this.fn_search = function(obj:Button,  e:nexacro.ClickEventInfo)
    var searchCondition =  "NAME";
     var searchKeyword = this.div_search.edt_searchKeyword.value;       
     
-    
-	this.ds_search.setColumn(0, "searchCondition", searchCondition);
+
+	this.ds_search.setColumn(0, "searchCondition", "NAME");
 	this.ds_search.setColumn(0, "searchKeyword", searchKeyword);
    
    var oDatas =  {
 			  svcid : "search",
 			  sController : "userSelectVO.do",			 
-			  inds :["ds_search=ds_search:U"],
+			  inds :["ds_search=ds_search"],
 			  outds :[
 				 "ds_user=output1"
 			     ],			     
@@ -163,7 +163,7 @@ this.fn_search = function(obj:Button,  e:nexacro.ClickEventInfo)
 			  nDataType : 0,   // (0: XML타입, 1: 이진 타입, 2: SSV 타입)
 			  bCompress :false,	 //			  
 			}; 
-	 
+	 trace(" this.ds_search : " + this.ds_search.saveXML());
     //공통 transaction 함수 호츨   //function callback 
 	Iject.transaction(this,oDatas,function(){   
 		
@@ -183,7 +183,7 @@ this.fn_search = function(obj:Button,  e:nexacro.ClickEventInfo)
 		} 
 	      
 	       var pThis = this.fobj;   //form object	      
-	       //trace(" ds_user : " + pThis.ds_user.saveXML());
+	       trace(" ds_user : " + pThis.ds_user.saveXML());
 	});
 }
 
