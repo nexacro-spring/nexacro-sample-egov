@@ -61,25 +61,13 @@
 this.application_onload = function(obj:Application, e:nexacro.LoadEventInfo)
 {
    //초기 application onload setting
-    Iject.appOnload(obj);
-            
+    Iject.appOnload(obj);            
 }
 
 
 
 
-/**
- * 공통 Callback 처리 Result 호출
- * @param {Object} jsonObject
- * @return {string}
- * @example
- *
- * @memberOf Iject.Controll
- */
-this.app_transactionCallback= function(oSvc,errorcode,errormsg)
-{
-     var trCallback = new Iject.Controll.callback().transaction(oSvc,errorcode,errormsg);
 
-}
+
 ]]></Script>
 </ADL>

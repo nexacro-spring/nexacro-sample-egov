@@ -59,7 +59,7 @@
         </ColumnInfo>
         <Rows>
           <Row>
-            <Col id="searchKeyword"/>
+            <Col id="searchKeyword">홍길동</Col>
             <Col id="searchCondition"/>
           </Row>
         </Rows>
@@ -105,7 +105,7 @@
 /***********************************************************************************
 * Common Library
 ***********************************************************************************/
-
+include "Lib::Comm.xjs";
 
 
 /***********************************************************************************
@@ -127,7 +127,7 @@
 this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
 {
 	//기본 공통  함수 초기화
-	Iject.formOnload(obj);
+	Iject.formOnload(obj);	
     this.fn_search();
    
 } 
@@ -145,6 +145,8 @@ this.fn_search = function(obj:Button,  e:nexacro.ClickEventInfo)
   
    var searchCondition =  "NAME";
     var searchKeyword = this.div_search.edt_searchKeyword.value;       
+    
+    
 	this.ds_search.setColumn(0, "searchCondition", searchCondition);
 	this.ds_search.setColumn(0, "searchKeyword", searchKeyword);
    
@@ -161,7 +163,7 @@ this.fn_search = function(obj:Button,  e:nexacro.ClickEventInfo)
 			  nDataType : 0,   // (0: XML타입, 1: 이진 타입, 2: SSV 타입)
 			  bCompress :false,	 //			  
 			}; 
-	
+	 
     //공통 transaction 함수 호츨   //function callback 
 	Iject.transaction(this,oDatas,function(){   
 		

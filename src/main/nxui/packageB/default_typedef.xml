@@ -34,6 +34,7 @@
     <Component type="JavaScript" id="Dataset" classname="nexacro.NormalDataset"/>   
   </Components>
   <Services>
+    <Service prefixid="IjectJS" type="file" url="./nexacro14lib/component/IjectJS" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="nexacro14lib.component" type="file" url="./nexacro14lib/component" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="nexacro14lib.framework" type="file" url="./nexacro14lib/framework/" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="nexacro14lib.resources" type="file" url="./nexacro14lib/resources/" cachelevel="session"  version="0" communicationversion="0"/>

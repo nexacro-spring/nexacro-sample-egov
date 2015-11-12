@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @fileoverview 넥사크로  공통 Library
  * @author  copyright 2015 TOBESOFT {J}
  */
@@ -433,23 +433,22 @@ if (!JsNamespace.exist("Iject"))
 
 			var pThis = o;
 			var strHttpUrl         =  application.services["svcurl"].url;
-			var oSvc 	           = {};
+			var oSvc 	           = {oform:pThis};
 				oSvc["formObj"]    = pThis;
 				oSvc["svcId"]      = pThis.name + "_"+ oData.svcid; //service id
 				oSvc["callback"]   =callback ;                            //callback명
 		    var sController        = Eco.isEmpty(oData.sController) ? "" : oData.sController;
 		    var bCompress          = Eco.isEmpty(oData.bCompress)   ? false : oData.bCompress; //controller id
-				var inputDataset       = Eco.isEmpty(oData.inds)        ? "" : Iject.Util.convertJsonInputString(oData.inds);   //input dataset
+			var inputDataset       = Eco.isEmpty(oData.inds)        ? "" : Iject.Util.convertJsonInputString(oData.inds);   //input dataset
 		    var outputDataset      = Eco.isEmpty(oData.outds)       ? "" : Iject.Util.convertJsonInputString(oData.outds);   //output dataset
 		    var strArgument        = Eco.isEmpty(oData.args)        ? "" : Iject.Util.convertJsonInputString(oData.args);  // argument  변환
-		    var bAsync             = Eco.isEmpty(oData.bAsync)      ? "true" : oData.bAsync;           // 비동기여부 (true : async  false: sync)
+		    var bAsync             = Eco.isEmpty(oData.bAsync)      ? true : oData.bAsync;           // 비동기여부 (true : async  false: sync)
 		    var nDataType          = Eco.isEmpty(oData.nDataType)   ?  false : oData.nDataType;
 			var sURL               = strHttpUrl + sController;       //service url
 
-   		   application.transaction(oSvc, sURL, inputDataset, outputDataset,strArgument,"app_transactionCallback",bAsync,nDataType,bCompress);
+   		   pThis.transaction(oSvc, sURL,inputDataset, outputDataset,strArgument,"Comm_transactionCallback",bAsync);
 
 		}
-
 
 	});
 }
