@@ -19,8 +19,7 @@ if (!JsNamespace.exist("Iject"))
 		 * @private
 		 * @memberOf Iject
 		 */
-		 $ : {
-		},
+		 $ : {},
 
 		/**
 		 *ADL 로딩시 초기 설정구성
