@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>nexacroax14(TOBESOFT) Test Page </TITLE>
+
+<SCRIPT LANGUAGE="javascript">
+var pKey = "nxipm_ie";  
+var Server_Path = "http://" + window.location.host;	//����ϴ� ���� �ּ�
+var prj_Path = "http://" + window.location.host + "/nxipm/";	//����ϴ� ���� �ּ�
+function fn_onload()
+{
+
+  nexacroax14.key = pKey;
+  //alert(Server_Path+"/nexacro/nexacro.xadl.js");
+  //nexacroax14.xadl = Server_Path+"/nexacro/nexacro.xadl.js";
+  nexacroax14.bjson = prj_Path+"start.json";
+  nexacroax14.autosize = false; // set 
+  //alert(nexacroax14.set_xadl);
+  nexacroax14.run();
+}
+		
+function fn_onresize()
+{
+	var w = document.body.offsetWidth;
+	var h = document.body.offsetHeight;
+
+	nexacroax14.width = w - 4;;
+	nexacroax14.height = h - 4;
+	//nexacroax14.callscript("af_browserResize("+w +", "+h+")");
+		
+}		
+</SCRIPT>	
+
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="addlog(strMsg)">		
+	</SCRIPT>
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="beforeexit(bCloseFlag, bHandledFlag)">		
+	</SCRIPT>	
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="communication(bStart)">	
+	</SCRIPT>	
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="error(nError, strErrMsg)">		
+	</SCRIPT>
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="exit()">		
+	</SCRIPT>
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="load(strURL)">			
+	</SCRIPT>
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="loadingglobalvariables(strURL)">		
+	</SCRIPT>
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="loadtypedefinition(strURL)">		
+	</SCRIPT>
+	<SCRIPT LANGUAGE=javascript FOR=nexacroax14 EVENT="usernotify(nNotifyID, strMsg)">		
+	</SCRIPT>
+<script type="text/javascript">
+html {
+	  height: 100%;
+	  overflow: hidden; /* Hides scrollbar in IE */
+	}
+	 
+	body {
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	}
+	 
+	#nexacroax14 {
+	  height: 100%;
+	}
+</script>
+</HEAD>
+
+<BODY style="overflow:hidden;margin:0px;padding:0px;width:100%;height:100%;" onload ="fn_onload()" onresize="fn_onresize()">
+<OBJECT ID="nexacroax14" CLASSID="CLSID:6DB5422D-536F-4B80-B32C-16BEA0971512" width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"></OBJECT>
+</BODY>
+</HTML>
