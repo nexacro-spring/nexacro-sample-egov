@@ -11,7 +11,7 @@
 <meta name="viewport" content="user-scalable=1, initial-scale=1.0, width=device-width, target-densitydpi=device-dpi"/>
 <SCRIPT LANGUAGE="JavaScript"> 
 
-var pKey = "nexacro";
+var pKey = "nuiPackageB";
 var Server_Path = "http://" + window.location.host;	//사용하는 서버 주소
 var prj_Path = "http://" + window.location.host + ":8080/deploy/";	//사용하는 서버 주소
 var bOnError = false;
@@ -84,10 +84,10 @@ function fn_launchCall()
 function run_nexacro()
 {
        document.getElementById("title").style.display = "block";  
-       nexacrolauncherax14.key = "packageB";
+       nexacrolauncherax14.key = pKey;
        nexacrolauncherax14.bjson = prj_Path+"start.json";
-       nexacrolauncherax14.makeshortcut("nxipm", prj_Path + "Install/img/xicon2.ico", "desktop","0");
-       nexacrolauncherax14.splashimage = prj_Path+"Install/img/blank.gif";
+     //  nexacrolauncherax14.makeshortcut(pKey, prj_Path + "Install/img/xicon2.ico", "desktop","0");
+       nexacrolauncherax14.splashimage = prj_Path+"Install/img/waiting.gif";
        nexacrolauncherax14.onlyone = true;
   
        nexacrolauncherax14.launch();
