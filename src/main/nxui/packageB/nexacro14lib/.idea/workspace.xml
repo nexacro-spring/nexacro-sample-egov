@@ -2,68 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="754157d9-aa49-4d30-a369-921f6d2f343f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/FrameBase.js" afterPath="$PROJECT_DIR$/component/CompBase/FrameBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase.json" afterPath="$PROJECT_DIR$/component/CompBase.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/MediaPlayer.js" afterPath="$PROJECT_DIR$/component/ComComp/MediaPlayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Menu.js" afterPath="$PROJECT_DIR$/component/ComComp/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Chart.json" afterPath="$PROJECT_DIR$/component/Chart.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Map.js" afterPath="$PROJECT_DIR$/component/ComComp/Map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/FileUpload.js" afterPath="$PROJECT_DIR$/component/ComComp/FileUpload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Edit.js" afterPath="$PROJECT_DIR$/component/ComComp/Edit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Grid/Grid.js" afterPath="$PROJECT_DIR$/component/Grid/Grid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Element_Runtime.js" afterPath="$PROJECT_DIR$/component/CompBase/Element_Runtime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/CheckBox.js" afterPath="$PROJECT_DIR$/component/ComComp/CheckBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DesignComp/DesignForm.js" afterPath="$PROJECT_DIR$/component/DesignComp/DesignForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Sketch.js" afterPath="$PROJECT_DIR$/component/ComComp/Sketch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/EcoLibrary.json" afterPath="$PROJECT_DIR$/component/EcoLibrary.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ExportObject.js" afterPath="$PROJECT_DIR$/component/ComComp/ExportObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/EditBase.js" afterPath="$PROJECT_DIR$/component/CompBase/EditBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/Mobile.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/Mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ProgressBar.js" afterPath="$PROJECT_DIR$/component/ComComp/ProgressBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/Plugin.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/Plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/FormBase.js" afterPath="$PROJECT_DIR$/component/CompBase/FormBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Element_HTML5.js" afterPath="$PROJECT_DIR$/component/CompBase/Element_HTML5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ListBox.js" afterPath="$PROJECT_DIR$/component/ComComp/ListBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Step.js" afterPath="$PROJECT_DIR$/component/CompBase/Step.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Data.js" afterPath="$PROJECT_DIR$/component/CompBase/Data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Tab.js" afterPath="$PROJECT_DIR$/component/ComComp/Tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ImportObject.js" afterPath="$PROJECT_DIR$/component/ComComp/ImportObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Tray.js" afterPath="$PROJECT_DIR$/component/ComComp/Tray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/MaskEdit.js" afterPath="$PROJECT_DIR$/component/ComComp/MaskEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ImageViewer.js" afterPath="$PROJECT_DIR$/component/ComComp/ImageViewer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/SQLite_Runtime.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/SQLite_Runtime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Static.js" afterPath="$PROJECT_DIR$/component/ComComp/Static.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/CompBase.js" afterPath="$PROJECT_DIR$/component/CompBase/CompBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/SQLite.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/SQLite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/CompEventBase.js" afterPath="$PROJECT_DIR$/component/CompBase/CompEventBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/TitleBar.js" afterPath="$PROJECT_DIR$/component/CompBase/TitleBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/FlashPlayer.js" afterPath="$PROJECT_DIR$/component/ComComp/FlashPlayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Calendar.js" afterPath="$PROJECT_DIR$/component/ComComp/Calendar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/GroupBox.js" afterPath="$PROJECT_DIR$/component/ComComp/GroupBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/PopupDiv.js" afterPath="$PROJECT_DIR$/component/ComComp/PopupDiv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/DomObject.js" afterPath="$PROJECT_DIR$/component/ComComp/DomObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/FileDownload.js" afterPath="$PROJECT_DIR$/component/ComComp/FileDownload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI.json" afterPath="$PROJECT_DIR$/component/DeviceAPI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/FlashPlayer.js" afterPath="$PROJECT_DIR$/component/ComComp/FlashPlayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ImageViewer.js" afterPath="$PROJECT_DIR$/component/ComComp/ImageViewer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Menu.js" afterPath="$PROJECT_DIR$/component/ComComp/Menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/SQLite.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/SQLite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/CompBase.js" afterPath="$PROJECT_DIR$/component/CompBase/CompBase.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Dataset.js" afterPath="$PROJECT_DIR$/component/ComComp/Dataset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Radio.js" afterPath="$PROJECT_DIR$/component/ComComp/Radio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/DatePicker.js" afterPath="$PROJECT_DIR$/component/ComComp/DatePicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Chart/ChartInfo.js" afterPath="$PROJECT_DIR$/component/Chart/ChartInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Grid.json" afterPath="$PROJECT_DIR$/component/Grid.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Spin.js" afterPath="$PROJECT_DIR$/component/ComComp/Spin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/PopupMenu.js" afterPath="$PROJECT_DIR$/component/ComComp/PopupMenu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Button.js" afterPath="$PROJECT_DIR$/component/ComComp/Button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Chart/Chart.js" afterPath="$PROJECT_DIR$/component/Chart/Chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/TextArea.js" afterPath="$PROJECT_DIR$/component/ComComp/TextArea.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp.json" afterPath="$PROJECT_DIR$/component/ComComp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Grid/GridInfo.js" afterPath="$PROJECT_DIR$/component/Grid/GridInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Edit.js" afterPath="$PROJECT_DIR$/component/ComComp/Edit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Combo.js" afterPath="$PROJECT_DIR$/component/ComComp/Combo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Static.js" afterPath="$PROJECT_DIR$/component/ComComp/Static.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/TextArea.js" afterPath="$PROJECT_DIR$/component/ComComp/TextArea.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Grid/Grid.js" afterPath="$PROJECT_DIR$/component/Grid/Grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ProgressBar.js" afterPath="$PROJECT_DIR$/component/ComComp/ProgressBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Tab.js" afterPath="$PROJECT_DIR$/component/ComComp/Tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/Mobile.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/Mobile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/EditBase.js" afterPath="$PROJECT_DIR$/component/CompBase/EditBase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/FileUpload.js" afterPath="$PROJECT_DIR$/component/ComComp/FileUpload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/FormBase.js" afterPath="$PROJECT_DIR$/component/CompBase/FormBase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Tray.js" afterPath="$PROJECT_DIR$/component/ComComp/Tray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/CompEventBase.js" afterPath="$PROJECT_DIR$/component/CompBase/CompEventBase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/CheckBox.js" afterPath="$PROJECT_DIR$/component/ComComp/CheckBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Element_HTML5.js" afterPath="$PROJECT_DIR$/component/CompBase/Element_HTML5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Radio.js" afterPath="$PROJECT_DIR$/component/ComComp/Radio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/EcoLibrary.json" afterPath="$PROJECT_DIR$/component/EcoLibrary.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs_Runtime.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs_Runtime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase.json" afterPath="$PROJECT_DIR$/component/CompBase.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ImportObject.js" afterPath="$PROJECT_DIR$/component/ComComp/ImportObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ExportObject.js" afterPath="$PROJECT_DIR$/component/ComComp/ExportObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp.json" afterPath="$PROJECT_DIR$/component/ComComp.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Element_Runtime.js" afterPath="$PROJECT_DIR$/component/CompBase/Element_Runtime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/FileDownload.js" afterPath="$PROJECT_DIR$/component/ComComp/FileDownload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/TitleBar.js" afterPath="$PROJECT_DIR$/component/CompBase/TitleBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Spin.js" afterPath="$PROJECT_DIR$/component/ComComp/Spin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Grid.json" afterPath="$PROJECT_DIR$/component/Grid.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI.json" afterPath="$PROJECT_DIR$/component/DeviceAPI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/ListBox.js" afterPath="$PROJECT_DIR$/component/ComComp/ListBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Button.js" afterPath="$PROJECT_DIR$/component/ComComp/Button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Chart.json" afterPath="$PROJECT_DIR$/component/Chart.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/FrameBase.js" afterPath="$PROJECT_DIR$/component/CompBase/FrameBase.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/TabFrame.js" afterPath="$PROJECT_DIR$/component/CompBase/TabFrame.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Chart/Chart.js" afterPath="$PROJECT_DIR$/component/Chart/Chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/Plugin.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/Plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Step.js" afterPath="$PROJECT_DIR$/component/CompBase/Step.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Grid/GridInfo.js" afterPath="$PROJECT_DIR$/component/Grid/GridInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/DatePicker.js" afterPath="$PROJECT_DIR$/component/ComComp/DatePicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Calendar.js" afterPath="$PROJECT_DIR$/component/ComComp/Calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/MaskEdit.js" afterPath="$PROJECT_DIR$/component/ComComp/MaskEdit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/WebBrowser.js" afterPath="$PROJECT_DIR$/component/ComComp/WebBrowser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/SQLite_Runtime.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/SQLite_Runtime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/PopupDiv.js" afterPath="$PROJECT_DIR$/component/ComComp/PopupDiv.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Div.js" afterPath="$PROJECT_DIR$/component/ComComp/Div.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/ScrollBar.js" afterPath="$PROJECT_DIR$/component/CompBase/ScrollBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs_Runtime.js" afterPath="$PROJECT_DIR$/component/DeviceAPI/DeviceObjs_Runtime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/DomObject.js" afterPath="$PROJECT_DIR$/component/ComComp/DomObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/DesignComp/DesignForm.js" afterPath="$PROJECT_DIR$/component/DesignComp/DesignForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/Chart/ChartInfo.js" afterPath="$PROJECT_DIR$/component/Chart/ChartInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/Sketch.js" afterPath="$PROJECT_DIR$/component/ComComp/Sketch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/StatusBar.js" afterPath="$PROJECT_DIR$/component/CompBase/StatusBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/WebBrowser.js" afterPath="$PROJECT_DIR$/component/ComComp/WebBrowser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/ComComp/MediaPlayer.js" afterPath="$PROJECT_DIR$/component/ComComp/MediaPlayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/CompBase/Data.js" afterPath="$PROJECT_DIR$/component/CompBase/Data.js" />
     </list>
     <ignored path="nexacro14lib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,14 +84,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Iject.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Iject.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/component/IjectJS/Iject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70283806">
-              <caret line="447" column="36" selection-start-line="447" selection-start-column="36" selection-end-line="447" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="446" column="36" selection-start-line="446" selection-start-column="36" selection-end-line="446" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/component/IjectJS/Util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="581" column="17" selection-start-line="581" selection-start-column="8" selection-end-line="581" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -222,33 +232,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nexacro14lib">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="component">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -311,6 +294,33 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="IjectJS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="nexacro14lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="component">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -399,26 +409,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15856236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15785764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282636" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13870542" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22324967" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -466,7 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1061" column="33" selection-start-line="1061" selection-start-column="33" selection-end-line="1061" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,14 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="204" column="21" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/IjectJS/Util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07881773">
-          <caret line="764" column="45" selection-start-line="764" selection-start-column="45" selection-end-line="764" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -737,9 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24630542">
           <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,11 +803,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/component/IjectJS/Iject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70283806">
-          <caret line="447" column="36" selection-start-line="447" selection-start-column="36" selection-end-line="447" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="446" column="36" selection-start-line="446" selection-start-column="36" selection-end-line="446" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/IjectJS/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="581" column="17" selection-start-line="581" selection-start-column="8" selection-end-line="581" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
