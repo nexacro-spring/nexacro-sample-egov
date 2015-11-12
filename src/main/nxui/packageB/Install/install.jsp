@@ -13,7 +13,7 @@
 
 var pKey = "nexacro";
 var Server_Path = "http://" + window.location.host;	//사용하는 서버 주소
-var prj_Path = "http://" + window.location.host + "/packageB/";	//사용하는 서버 주소
+var prj_Path = "http://" + window.location.host + ":8080/deploy/";	//사용하는 서버 주소
 var bOnError = false;
 var NEXACRO_CAB_VER = "2015,9,22,1";
 
@@ -84,7 +84,7 @@ function fn_launchCall()
 function run_nexacro()
 {
        document.getElementById("title").style.display = "block";  
-       nexacrolauncherax14.key = "nxipm_runtime";
+       nexacrolauncherax14.key = "packageB";
        nexacrolauncherax14.bjson = prj_Path+"start.json";
        nexacrolauncherax14.makeshortcut("nxipm", prj_Path + "Install/img/xicon2.ico", "desktop","0");
        nexacrolauncherax14.splashimage = prj_Path+"Install/img/blank.gif";
