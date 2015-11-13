@@ -145,7 +145,7 @@ if (!JsNamespace.exist("Iject.Controll"))
              */
            this.importEnd_onsuccess = function(obj,e)
            {
-              alert(":::::::::::: importEnd :::::::::::::::::");
+             
                Iject.$["fobj"].setWaitCursor(false,true);
            };
 

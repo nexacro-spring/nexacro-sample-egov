@@ -753,40 +753,26 @@ if (!JsNamespace.exist("Iject.Util"))
 
         },
 
-
         /**
-         * 현재 플랫폼의 OS종류를 구한다.
-         * @return {string}  반환os
+         * 메시지를 치환
+         * @param {string} 치화활 message
+         * @return {array}  치환할 인자값 array
          * @example
+         * 	 var msg = "[{0}] 검색가능 일자는 {1} ~ {2} 입니다.";
+         * var convertMsg =  Iject.Util.convertMessage(msg,["알림", "2015-05-01", "2015-05-12"]);
+         * trace(convertMsg); //[알림] 검색가능 일자는 2015-05-01 ~ 2015-05-12 입니다.
          * @memberOf Iject.util
          */
-        getOS : function()
-        {
-            var osVersion = system.osversion;
-
-            if ( Eco.isEmpty(osVersion) )
-                return "ETC";
-
-            osVersion = osVersion.toUpperCase();
-
-            if ( osVersion.indexOf("ANDROID") >= 0 )	// android 
-            {
-                return "ANDROID";
-            }
-            else if ( osVersion.indexOf("IOS") >= 0 )
-            {
-                return "IOS";
-            }
-            else if ( osVersion.indexOf("WINDOWS") >= 0 )
-            {
-                return "WINDOWS";
-            }
-            else
-            {
-                return "ETC";
-            }
+        convertMessage : function(msg, values) {
+            return msg.replace(/\{(\d+)\}/g, function() {
+                return values[arguments[1]];
+            });
         }
 
-
     });
+
 }
+
+
+
+

@@ -89,6 +89,7 @@ if (!JsNamespace.exist("Iject"))
 		 */
 		login : function(o)
 		{
+
 			if(nexacro.Browser == "Runtime")
 			{
 				Iject.Runtime.login(o);
