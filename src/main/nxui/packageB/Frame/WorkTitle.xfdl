@@ -4,7 +4,7 @@
   <Form id="WorkTitle" classname="WorkTitle" left="0" top="0" width="1164" height="36">
     <Layouts>
       <Layout>
-        <Static id="Static50" taborder="0" cssclass="sta_WF_Title" left="4" top="7" height="21" width="380"/>
+        <Static id="Static50" taborder="0" cssclass="sta_WF_Title" left="4" top="7" height="21" width="380" text="dsfdsafasfsadfdsaf"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.0"><![CDATA[/***********************************************************************************

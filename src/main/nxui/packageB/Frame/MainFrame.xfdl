@@ -194,15 +194,15 @@
             </Layout>
           </Layouts>
         </Div>
-        <Div id="Div02" taborder="4" left="444" top="268" height="274" cssclass="div_MF_Article" right="33.05%">
+        <Div id="Div02" taborder="4" left="444" top="268" height="274" cssclass="div_MF_Article" width="413">
           <Layouts>
             <Layout width="413" height="274">
-              <Static id="Static12" taborder="0" left="0" top="0" height="39" cssclass="sta_MF_ChartTitle" text="Chart A" right="0"/>
+              <Static id="Static12" taborder="0" left="0" top="8" height="39" cssclass="sta_MF_ChartTitle" text="Chart A" right="0"/>
               <Static id="Static01" taborder="3" top="22.43%" height="66.91%" style="background:transparent URL('img::img_MF_ChartGraphA.png');" right="24" left="8.52%"/>
             </Layout>
           </Layouts>
         </Div>
-        <Div id="Div03" taborder="5" left="67.66%" top="268" height="274" cssclass="div_MF_Article" width="413">
+        <Div id="Div03" taborder="5" left="866" top="268" height="274" cssclass="div_MF_Article" width="409">
           <Layouts>
             <Layout>
               <Static id="Static12" taborder="0" left="0" top="0" height="39" cssclass="sta_MF_ChartTitle" text="Chart B" right="0"/>
@@ -210,10 +210,10 @@
             </Layout>
           </Layouts>
         </Div>
-        <Div id="Div04" taborder="6" left="444" top="552" height="204" cssclass="div_MF_Article" right="0">
+        <Div id="Div04" taborder="6" left="444" top="552" height="204" cssclass="div_MF_Article" width="836">
           <Layouts>
             <Layout>
-              <Tab id="Tab00" taborder="0" left="-1" top="1" height="202" tabindex="0" scrollbars="autoboth" cssclass="tab_MF_Notice" right="0">
+              <Tab id="Tab00" taborder="0" left="-1" top="1" tabindex="0" scrollbars="autoboth" cssclass="tab_MF_Notice" right="0" bottom="0">
                 <Tabpages>
                   <Tabpage id="tabpage1" text="tabpage1" left="0" top="34" width="807" height="146" style="background:#fafafaff;">
                     <Layouts>
@@ -544,20 +544,25 @@ this.MainFrame_onsize = function(obj:Form, e:nexacro.SizeEventInfo)
 	
 }
 
-
+//mainframe onsize
 this.on_size = function()
 {
    if(application.mainframe.width < 1303)
 	{
+	   this.Div01.set_width(840);
+	   this.Div02.set_width(417 + "px");
+	   this.Div03.set_left(866 + "px");	       
+	   this.Div03.set_width(417 + "px");
+	   this.Div04.set_width(840);
 	   
-	   
-	   this.Div01.set_width(836);
-	   this.Div03.set_width(413);
 	}
 	else
 	{
-	   this.Div01.set_right(5);
-	    this.Div03.set_right(5);
+	   this.Div01.set_right(14);
+	   this.Div02.set_right(33.05 + "%");
+	   this.Div03.set_left(67.66 + "%");
+	   this.Div03.set_right(15);
+	   this.Div04.set_right(15);
 	}
 }
 ]]></Script>
