@@ -50,10 +50,10 @@
     <Service prefixid="Pattern" type="form" url="./Pattern/" cachelevel="dynamic" version="0" communicationversion="0"/>  
   </Services>
   <Update>
-    <Item systemtype="Windows" url="http://localhost:8080/nexacro-sample/deploy">
+    <Item systemtype="Windows" url="http://localhost:8080/nexacro-sample/packageB">
       <Os type="default" url="" engineurl="" enginesetupkey="" engineversion="">
         <Device type="default" url="" engineurl="" enginesetupkey="" engineversion="" desc="">
-          <Resource type="File" file="./Install/Download/component/ExtCommonV13.dll" targetpath="%Component%" version="14.0.0.27"/>
+          <Resource type="File" file="./Install/Component/ExtCommonV13.dll" targetpath="%Component%" version="14.0.0.27"/>
         </Device>
       </Os>
     </Item>
