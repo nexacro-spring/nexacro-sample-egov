@@ -55,14 +55,14 @@ public class SqlMapClientTemplateDelegator extends SqlMapClientTemplate {
     
     
     public List getNexacroMetaData(final String statementName, final Object parameterObject) throws DataAccessException {
-    	SqlMapClientCallback createProxiedSqlMapClientCallback = createProxiedSqlMapClientCallback(dbms, getSqlMapClient(), statementName, parameterObject, SqlMapClientCallback.class);
-        return execute(createProxiedSqlMapClientCallback); 
+    	SqlMapClientCallback<?> createProxiedSqlMapClientCallback = createProxiedSqlMapClientCallback(dbms, getSqlMapClient(), statementName, parameterObject, SqlMapClientCallback.class);
+        return (List) execute(createProxiedSqlMapClientCallback); 
     }
     
-    private SqlMapClientCallback createProxiedSqlMapClientCallback(Dbms dbms, SqlMapClient sqlMapClient, String statementName, Object parameterObject, Class<?> sqlMapClientCallbackInterface) {
+    private SqlMapClientCallback<?> createProxiedSqlMapClientCallback(Dbms dbms, SqlMapClient sqlMapClient, String statementName, Object parameterObject, Class<?> sqlMapClientCallbackInterface) {
 		ClassLoader classLoader = this.getClass().getClassLoader();
 		InvocationHandler sqlMapClientCallbackImpl = new NexacroIbatisMetaDataGatherer(dbms, sqlMapClient, statementName, parameterObject);
-		return (SqlMapClientCallback) Proxy.newProxyInstance(classLoader, new Class[]{sqlMapClientCallbackInterface}, sqlMapClientCallbackImpl);
+		return (SqlMapClientCallback<?>) Proxy.newProxyInstance(classLoader, new Class[]{sqlMapClientCallbackInterface}, sqlMapClientCallbackImpl);
 	}
     
     /***************************************************************************************/
