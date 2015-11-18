@@ -27,7 +27,7 @@ public class UserVO extends DefaultVO {
 	private String password;
 
 //	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "Please, Verify your e-mail address.")
-	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "{errors.email}") // message source
+	@Pattern(regexp = ".+@.+\\.[a-z]+", message = "{errors.validation.email}") // message source
     private String email;
 	
 	private String enName;
