@@ -14,15 +14,15 @@ import javax.validation.constraints.Size;
 public class UserVO extends DefaultVO {
 
     // Fields
-	@NotNull
+	@NotNull(message = "user id is required.")
 	@Size(min = 4, max = 20, message = "Please, Enter your id at least 4 Characters.")
     private String userId;
 	
-	@NotNull
+	@NotNull(message = "user namme is required.")
 	@Size(max = 20, message = "Please, Enter your name.")
 	private String userName;
 	
-	@NotNull
+	@NotNull(message = "password is required.")
 	@Size(min = 4, max = 50, message = "Please, Enter your password at least 4 Characters.")
 	private String password;
 
