@@ -9,7 +9,9 @@
             <!-- log4sql class -->
             <!-- core.log.jdbc.driver.HSQLDriver -->
             <class>ENC(d1Az6/46wRM9t4dvvgCsEBvCIW6uCuc4oD782SpfsVvWP64aHhlJeg==)</class>
+            <!-- 'jdbc:log4'jdbc:hsqldb:hsql://localhost:9001/sampledb -->
 			<url>ENC(itpK0ouWPt1+G3/9bpqxEYSZ1Yx/NmNc/cNC2u2jpwFCHlm1aP+xXjAa/jrALm0ESR+DckZCbEsXlkoq3nyHJQ==)</url>
+			<!-- sa -->
 			<user>ENC(Fv/Z5H8O6CrJ+EYSiIYhkw==)</user>
 		</hsql>
 	</jdbcs>	
