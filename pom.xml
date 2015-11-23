@@ -6,10 +6,10 @@
         <artifactId>nexacro-pom-parent</artifactId>
         <version>1.0.0</version>
     </parent>       
-    <groupId>com.nexacro.spring</groupId>
+    <groupId>com.nexacro.archetype</groupId>
     <artifactId>nexacro-sample-egov</artifactId>
     <packaging>war</packaging>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <name>nexacro-sample-egov</name>
     <url>http://maven.apache.org</url>
     <organization>
