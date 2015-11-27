@@ -44,10 +44,6 @@ public class UserServiceTest {
 		searchVo.setUserName("홍길동");
 		searchVo.setSearchCondition("NAME");
 
-		if (searchVo == null && "".equals(searchVo.getSearchKeyword())) {
-            throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
-        }
-
 		List<UserVO> userList = userService.selectUserVOList(searchVo);
 
 		if (userList.size() == 1 && "홍길동".equals(userList.get(0).getUserName())) {
