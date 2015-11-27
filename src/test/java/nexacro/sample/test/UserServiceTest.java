@@ -39,17 +39,14 @@ public class UserServiceTest {
 	}
 
 	@Test
-	public void testSelectUserVO() {
-		List<UserVO> searchVOList = new ArrayList<UserVO>();
-		UserVO userVO = new UserVO();
-		userVO.setUserName("홍길동");
-		userVO.setSearchCondition("NAME");
-		searchVOList.add(userVO);
+	public void testSelectUserVO() throws NexacroException {
+		UserVO searchVo = new UserVO();
+		searchVo.setUserName("홍길동");
+		searchVo.setSearchCondition("NAME");
 
-		UserVO searchVo = null;
-		if (searchVOList != null && searchVOList.size() > 0) {
-			searchVo = searchVOList.get(0);
-		}
+		if (searchVo == null && "".equals(searchVo.getSearchKeyword())) {
+            throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
+        }
 
 		List<UserVO> userList = userService.selectUserVOList(searchVo);
 
@@ -62,42 +59,43 @@ public class UserServiceTest {
 
 	@Test
 	public void testUserVO() {
-		UserVO userVO = new UserVO(); // 성공
-		userVO.setUserName("test1");
-		userVO.setUserId("test1");
-		userVO.setPassword("test1");
-		userVO.setEmail("test1@tobesoft.com");
+		UserVO userVO = createUserVO("test1", "test1", "test1", "test1@tobesoft.com"); // 성공
 		Assert.assertTrue(validate(userVO));
 	}
 
 	@Test
 	public void testUserVOWithWrongValues() {
-		UserVO userVO = new UserVO();
-		userVO.setUserName("testtesttesttesttestttt"); // 이름 20자 초과
-		userVO.setUserId("test1");
-		userVO.setPassword("test1");
-		userVO.setEmail("test1@tobesoft.com");
+		UserVO userVO = createUserVO("testtesttesttesttestttt", "test1", "test1", "test1@tobesoft.com"); // 이름 20자 초과
 		Assert.assertFalse(validate(userVO));
 
-		userVO.setUserName("test1");
-		userVO.setUserId("te"); // 아이디 네 글자 미만
-		userVO.setPassword("test1");
-		userVO.setEmail("test1@tobesoft.com");
+		userVO = createUserVO("test1", "te", "test1", "test1@tobesoft.com"); // 아이디 네 글자 미만
 		Assert.assertFalse(validate(userVO));
 
-		userVO.setUserName("test1");
-		userVO.setUserId("test1");
-		userVO.setPassword("te"); // 패스워드 네 글자 미만
-		userVO.setEmail("test1@tobesoft.com");
+		userVO = createUserVO("test1", "test1", "te", "test1@tobesoft.com"); // 패스워드 네 글자 미만
 		Assert.assertFalse(validate(userVO));
 
-		userVO.setUserName("test1");
-		userVO.setUserId("test1");
-		userVO.setPassword("te");
-		userVO.setEmail("test1tobesoft.com"); // 이메일 유효성 검사 실패
+		userVO = createUserVO("test1", "test1", "test1", "test1tobesoft.com"); // 이메일 유효성 검사 실패
 		Assert.assertFalse(validate(userVO));
 	}
 
+	/**
+	 * createUserVO
+	 * @param name
+	 * @param userId
+	 * @param password
+	 * @param email
+	 * @return
+	 */
+	private UserVO createUserVO(String name, String userId, String password, String email) {
+		UserVO userVO = new UserVO();
+		userVO.setUserName(name); // 이름 20자 초과
+		userVO.setUserId(userId);
+		userVO.setPassword(password);
+		userVO.setEmail(email);
+		
+		return userVO;
+	}
+	
 	/**
 	 * validate
 	 * @param modifyList
