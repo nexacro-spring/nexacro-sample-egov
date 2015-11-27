@@ -14,7 +14,6 @@ import com.nexacro.spring.annotation.ParamVariable;
 import com.nexacro.spring.data.NexacroResult;
 import com.nexacro.xapi.data.DataSet;
 import com.nexacro.xapi.data.Debugger;
-import com.nexacro.xapi.data.PlatformData;
 
 /**
  * <pre>
@@ -39,16 +38,10 @@ public class SecureController {
     @RequestMapping(value = "/secureSelectVO.do")
      public NexacroResult secureData(
                               @ParamVariable(name="id")  String paramValue
-                            , @ParamDataSet(name="dsInput") DataSet dsUnit
-                            , PlatformData platformData){
+                            , @ParamDataSet(name="dsInput") DataSet dsUnit) {
         
-        if (log.isDebugEnabled()) {
-            System.out.println("SecureController.secureData()");
-            log.debug("SecureController.secureData(). data="+new Debugger().detail(platformData));
-        }
-        
-        System.out.println("id: " + paramValue);
-        System.out.println("dsInput"+new Debugger().detail(dsUnit));
+		System.out.println("id: " + paramValue);
+		System.out.println("dsInput" + new Debugger().detail(dsUnit));
 
         NexacroResult result = new NexacroResult();
         return result;

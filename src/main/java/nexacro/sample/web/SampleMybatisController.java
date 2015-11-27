@@ -12,10 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.nexacro.spring.NexacroException;
 import com.nexacro.spring.annotation.ParamDataSet;
 import com.nexacro.spring.data.NexacroResult;
-import com.nexacro.xapi.data.PlatformData;
 
 /**
  * Test를 위한 Controller mybatis Sample Class
@@ -34,14 +32,8 @@ public class SampleMybatisController {
     private SampleService sampleMybatisService;
     
     @RequestMapping(value = "/sampleMybatisSelectVO.do")
-    public NexacroResult selectMybatisVo(
-                            @ParamDataSet(name="ds_search", required=false) SampleVO searchVo
-                            , PlatformData platformData) throws NexacroException{
+	public NexacroResult selectMybatisVo(@ParamDataSet(name = "ds_search", required = false) SampleVO searchVo) {
         
-		if (searchVo == null || "".equals(searchVo.getSearchKeyword())) {
-            throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
-        }
-    	
         List<SampleVO> sampleList = sampleMybatisService.selectSampleVOList(searchVo);
         
         NexacroResult result = new NexacroResult();

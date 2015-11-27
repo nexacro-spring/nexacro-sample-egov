@@ -42,12 +42,8 @@ public class CodeController  {
      * @throws NexacroException 
      */
     @RequestMapping(value = "/selectCodeGroupList.do")
-    public NexacroResult selectCodeGroupList(@ParamDataSet(name="ds_search", required=false) GroupCodeVO searchVo) throws NexacroException{
-        
-		if (searchVo == null || "".equals(searchVo.getSearchKeyword())) {
-            throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
-        }
-        
+	public NexacroResult selectCodeGroupList(@ParamDataSet(name = "ds_search", required = false) GroupCodeVO searchVo) {
+ 
         List<GroupCodeVO> groupCodeList = codeService.selectCodeGroupList(searchVo);
         
         List<CodeVO> codeList = codeService.selectCodeList();

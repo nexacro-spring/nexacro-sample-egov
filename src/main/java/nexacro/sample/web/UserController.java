@@ -1,7 +1,6 @@
 package nexacro.sample.web;
 
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -21,11 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.nexacro.spring.NexacroException;
 import com.nexacro.spring.annotation.ParamDataSet;
-import com.nexacro.spring.context.NexacroContext;
-import com.nexacro.spring.context.NexacroContextHolder;
 import com.nexacro.spring.data.NexacroResult;
-import com.nexacro.xapi.data.Debugger;
-import com.nexacro.xapi.data.PlatformData;
 
 /**
  * Test를 위한 Controller Sample Class
@@ -54,18 +49,7 @@ public class UserController {
 	}
     
     @RequestMapping(value = "/userSelectVO.do")
-	public NexacroResult selectVo(
-			@ParamDataSet(name = "ds_search", required=false) UserVO searchVo,
-			PlatformData platformData) throws NexacroException {
-        
-        if (log.isDebugEnabled()) {
-            System.out.println("UserController.selectVo()");
-            log.debug("UserController.selectVo(). data="+new Debugger().detail(platformData));
-        }
-        
-		if (searchVo == null || "".equals(searchVo.getSearchKeyword())) {
-			throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
-		}
+	public NexacroResult selectVo(@ParamDataSet(name = "ds_search", required = false) UserVO searchVo) {
         
         List<UserVO> userList = userService.selectUserVOList(searchVo);
         
@@ -76,14 +60,7 @@ public class UserController {
     }
     
 	@RequestMapping(value = "/userModifyVO.do")
-	public NexacroResult modifyVO(
-			@ParamDataSet(name = "input1") List<UserVO> modifyList, 
-			PlatformData platformData) throws NexacroException {
-		
-		if (log.isDebugEnabled()) {
-			System.out.println("UserController.modifyVO");
-			log.debug("UserController.selectVo(). data=" + new Debugger().detail(platformData));
-		}
+	public NexacroResult modifyVO(@ParamDataSet(name = "input1") List<UserVO> modifyList) throws NexacroException {
 		
 		validate(modifyList);
 

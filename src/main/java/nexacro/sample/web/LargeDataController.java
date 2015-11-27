@@ -42,11 +42,6 @@ public class LargeDataController {
     public NexacroResult largeData(NexacroFirstRowHandler firstRowHandler
                             , @ParamVariable(name="firstRowCount", required=false) int firstRowCount){
         
-        
-        if (log.isDebugEnabled()) {
-            log.debug("sampleLargeData.do().");
-        }
-       
 /*
 
 runtime(XML, SSV, BINARY) 가능
@@ -74,9 +69,6 @@ browser
     public NexacroResult jdbcLargeData(NexacroFirstRowHandler firstRowHandler
                             , @ParamVariable(name="firstRowCount", required=false) int firstRowCount){
         
-        if (log.isDebugEnabled()) {
-            log.debug("sampleJdbcLargeData.do().");
-        }
         firstRowHandler.setContentType(PlatformType.CONTENT_TYPE_SSV);
         
         String sendDataSetName = "firstRowData";
@@ -92,9 +84,6 @@ browser
     public NexacroResult mybatisLargeData(NexacroFirstRowHandler firstRowHandler
                             , @ParamVariable(name="firstRowCount", required=false) int firstRowCount){
         
-        if (log.isDebugEnabled()) {
-            log.debug("sampleMybatisLargeData.do().");
-        }
         firstRowHandler.setContentType(PlatformType.CONTENT_TYPE_SSV);
         
         String sendDataSetName = "firstRowData";
