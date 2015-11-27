@@ -55,18 +55,17 @@ public class UserController {
     
     @RequestMapping(value = "/userSelectVO.do")
 	public NexacroResult selectVo(
-			@ParamDataSet(name = "ds_search", required=false) List<UserVO> searchVOList,
-			PlatformData platformData) {
+			@ParamDataSet(name = "ds_search", required=false) UserVO searchVo,
+			PlatformData platformData) throws NexacroException {
         
         if (log.isDebugEnabled()) {
             System.out.println("UserController.selectVo()");
             log.debug("UserController.selectVo(). data="+new Debugger().detail(platformData));
         }
         
-        UserVO searchVo = null;
-        if(searchVOList != null && searchVOList.size() > 0) {
-            searchVo = searchVOList.get(0);
-        }
+		if (searchVo == null || "".equals(searchVo.getSearchKeyword())) {
+			throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
+		}
         
         List<UserVO> userList = userService.selectUserVOList(searchVo);
         

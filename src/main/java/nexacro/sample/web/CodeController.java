@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.nexacro.spring.NexacroException;
 import com.nexacro.spring.annotation.ParamDataSet;
 import com.nexacro.spring.data.NexacroResult;
 
@@ -38,13 +39,13 @@ public class CodeController  {
      *
      * @param searchVOList
      * @return
+     * @throws NexacroException 
      */
     @RequestMapping(value = "/selectCodeGroupList.do")
-    public NexacroResult selectCodeGroupList(@ParamDataSet(name="ds_search", required=false) List<GroupCodeVO> searchVOList){
+    public NexacroResult selectCodeGroupList(@ParamDataSet(name="ds_search", required=false) GroupCodeVO searchVo) throws NexacroException{
         
-        GroupCodeVO searchVo = null;
-        if(searchVOList != null && searchVOList.size() > 0) {
-            searchVo = searchVOList.get(0);
+		if (searchVo == null || "".equals(searchVo.getSearchKeyword())) {
+            throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
         }
         
         List<GroupCodeVO> groupCodeList = codeService.selectCodeGroupList(searchVo);

@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.nexacro.spring.NexacroException;
 import com.nexacro.spring.annotation.ParamDataSet;
 import com.nexacro.spring.annotation.ParamVariable;
 import com.nexacro.spring.data.NexacroFirstRowHandler;
@@ -50,17 +51,16 @@ public class SampleController {
     
     @RequestMapping(value = "/sampleSelectVO.do")
     public NexacroResult selectVo(
-                            @ParamDataSet(name="ds_search", required=false) List<SampleVO> searchVOList
-                            , PlatformData platformData){
+                            @ParamDataSet(name="ds_search", required=false) SampleVO searchVo
+                            , PlatformData platformData) throws NexacroException{
         
         if (log.isDebugEnabled()) {
             System.out.println("SampleController.selectVo()");
             log.debug("SampleController.selectVo(). data="+new Debugger().detail(platformData));
         }
         
-        SampleVO searchVo = null;
-        if(searchVOList != null && searchVOList.size() > 0) {
-            searchVo = searchVOList.get(0);
+		if (searchVo == null || "".equals(searchVo.getSearchKeyword())) {
+            throw new NexacroException("Search keyword should not be null or empty", NexacroException.DEFAULT_ERROR_CODE, "Search keyword should not be null or empty");
         }
         
         List<SampleVO> sampleList = sampleService.selectSampleVOList(searchVo);
