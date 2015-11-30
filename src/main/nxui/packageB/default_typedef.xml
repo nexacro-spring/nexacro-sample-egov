@@ -31,23 +31,26 @@
     <Component type="JavaScript" id="GroupBox" classname="nexacro.GroupBox"/>
     <Component type="JavaScript" id="ProgressBar" classname="nexacro.ProgressBar"/>
     <Component type="JavaScript" id="Plugin" classname="nexacro.Plugin"/>
-    <Component type="JavaScript" id="Dataset" classname="nexacro.NormalDataset"/>   
+    <Component type="JavaScript" id="Dataset" classname="nexacro.NormalDataset"/>
+    <Component type="JavaScript" id="FileUpload" classname="nexacro.FileUpload"/>
+    <Component type="JavaScript" id="ExtFileUpload" classname="nexacro.ExtFileUpload"/>
+    <Component type="JavaScript" id="ExtFileDownload" classname="nexacro.ExtFileDownload"/>
   </Components>
   <Services>
     <Service prefixid="IjectJS" type="file" url="./nexacro14lib/component/IjectJS" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="nexacro14lib.component" type="file" url="./nexacro14lib/component" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="nexacro14lib.framework" type="file" url="./nexacro14lib/framework/" cachelevel="session" version="0" communicationversion="0"/>
-    <Service prefixid="nexacro14lib.resources" type="file" url="./nexacro14lib/resources/" cachelevel="session"  version="0" communicationversion="0"/>
+    <Service prefixid="nexacro14lib.resources" type="file" url="./nexacro14lib/resources/" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="svcurl" type="JSP" url="http://localhost:8080/nexacro-sample/" cachelevel="none" version="0" communicationversion="0"/>
     <Service prefixid="Css" type="file" url="./Css/" cachelevel="session" version="0" communicationversion="0"/>
-    <Service prefixid="img" type="file" url="./img/"  cachelevel="session" version="0" communicationversion="0"/>
-    <Service prefixid="Frame" type="form" url="./Frame/"  cachelevel="session" version="0" communicationversion="0"/>
+    <Service prefixid="img" type="file" url="./img/" cachelevel="session" version="0" communicationversion="0"/>
+    <Service prefixid="Frame" type="form" url="./Frame/" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="Lib" type="js" url="./Lib/" cachelevel="session" version="0" communicationversion="0"/>
-    <Service prefixid="Install" type="file" url="./Install/" cachelevel="session" version="0" communicationversion="0"/>    
+    <Service prefixid="Install" type="file" url="./Install/" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="Template" type="form" url="./Template/" cachelevel="session" version="0" communicationversion="0"/>
     <Service prefixid="Sample" type="form" url="./Sample/" cachelevel="dynamic" version="0" communicationversion="0"/>
     <Service prefixid="Test" type="form" url="./Test/" cachelevel="session" version="0" communicationversion="0"/>
-    <Service prefixid="Pattern" type="form" url="./Pattern/" cachelevel="dynamic" version="0" communicationversion="0"/>  
+    <Service prefixid="Pattern" type="form" url="./Pattern/" cachelevel="dynamic" version="0" communicationversion="0"/>
   </Services>
   <Update>
     <Item systemtype="Windows" url="http://localhost:8080/nexacro-sample/packageB">

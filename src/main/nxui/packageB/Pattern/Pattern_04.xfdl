@@ -162,8 +162,8 @@ this.fileConfig = {
 		//downloadUrl : "jsp/downloadFile.jsp?fileName=",
 		downloadUrl : "advancedDownloadFile.do?fileName=",
 		deleteUrl : "advancedDeleteFiles.do",
-		downImage : "images::fileUpDownload/img_file.png",
-		delImage : "images::fileUpDownload/btn_del.png",
+		downImage : "img::fileUpDownload/img_file.png",
+		delImage : "img::fileUpDownload/btn_del.png",
 		allowTypes : ["jpg","jpeg","gif","png","bmp","txt","zip","7z","gzip","doc","docx","ppt","pptx","xls","xlsx","pdf"],
 		maxCount : 10,
 		maxSize : "200MB",
@@ -1023,7 +1023,7 @@ this.getFileIcon = function(fileName)
 	
 	if(icon == undefined) ext = "etc";
 
-	return "images::fileUpDownload/" + this.extToIcon[ext] + ".png";
+	return "img::fileUpDownload/" + this.extToIcon[ext] + ".png";
 }
 
 /**
