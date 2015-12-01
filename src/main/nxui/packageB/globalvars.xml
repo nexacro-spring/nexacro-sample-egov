@@ -150,25 +150,6 @@
         <Col id="UPDATE_USER">admin</Col>
         <Col id="MENU_DESC">II</Col>
       </Row>
-      <Row>
-        <Col id="MENU_NAME">팝업샘플</Col>
-        <Col id="MENU_SEQ">1</Col>
-        <Col id="MENU_OPTP">MAIN</Col>
-        <Col id="PAGE_URL">Pattern::Pattern_07.xfdl</Col>
-        <Col id="MENU_TOP">1000</Col>
-        <Col id="MENU_ID">1007</Col>
-        <Col id="MENU_GRP">1000</Col>
-        <Col id="CREATE_DT">20120831000000000</Col>
-        <Col id="MENU_LEVEL">1</Col>
-        <Col id="PAGE_ID">Pattern_07.xfdl</Col>
-        <Col id="PAGE_NAME">사용자 그룹관리</Col>
-        <Col id="MENU_ARGS">admin</Col>
-        <Col id="MENU_STAT">VIEW</Col>
-        <Col id="CREATE_USER">admin</Col>
-        <Col id="UPDATE_DT">20120905000000000</Col>
-        <Col id="UPDATE_USER">admin</Col>
-        <Col id="MENU_DESC">II</Col>
-      </Row>
     </Rows>
   </Dataset>
   <Dataset id="gds_openMenu">
