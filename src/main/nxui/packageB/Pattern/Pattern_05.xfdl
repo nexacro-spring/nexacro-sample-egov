@@ -413,7 +413,7 @@ this.fn_save = function(strSvcId)
 	 var oDatas =  {
 			  svcid : "save",
 			  sController : "modifyCodes.do",			 
-			  inds :["dsGroupCode=ds_codeGroupList",
+			  inds :["dsGroupCode=ds_codeGroupList:U",
 			         "dsCode=ds_codeList:U"  
 			        ],
 			  outds :[

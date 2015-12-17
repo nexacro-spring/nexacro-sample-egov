@@ -228,7 +228,7 @@ this.fn_save = function(strid)
 	var oDatas =  {
 			  svcid : strid,
 			  sController : "userModifyVO.do",			 
-			  inds :["input1=ds_user"],
+			  inds :["input1=ds_user:U"],
 			  outds :[
 				 "ds_user=output1"
 			     ],			     
