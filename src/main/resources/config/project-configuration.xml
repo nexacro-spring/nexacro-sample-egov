@@ -14,5 +14,11 @@
 			<!-- sa -->
 			<user>ENC(Fv/Z5H8O6CrJ+EYSiIYhkw==)</user>
 		</hsql>
-	</jdbcs>	
+	</jdbcs>
+	<beans>
+		<exceptionResolver>
+			<shouldLogStackTrace>true</shouldLogStackTrace>
+			<shouldSendStackTrace>true</shouldSendStackTrace>
+		</exceptionResolver>
+	</beans>	
 </configuratons>
